@@ -3,256 +3,242 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>2C Progress Coaching – Online Lifestyle Coaching für Training und Ernährung</title>
-<meta name="description" content="Individuelles Online-Coaching für Krafttraining und Ernährung mit wöchentlichem Video-Feedback. Jetzt unverbindliches Erstgespräch vereinbaren.">
+<title>2C Progress Coaching – Persönliches Online-Coaching für Training und Ernährung</title>
+<meta name="description" content="Persönliches Online-Coaching für Muskelaufbau, Fettabbau und Fitness im Alltag. Mit wöchentlichem Video-Feedback, individuellem Plan und direktem Kontakt.">
+<meta name="theme-color" content="#0b0e0c">
 <link rel="icon" href="logo.jpg">
 <style>
-:root{
-  --char:#3d3d3d; --char-dark:#2e2e2e; --paper:#f5f5f2; --ink:#1d1d1d; --mute:#6b6b66; --line:#d9d9d3; --ring:#e8c21a;
-  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
-  --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-}
+:root{--bg:#0b0e0c;--s1:#121713;--s2:#1a211c;--line:#27312a;--tx:#eef1ec;--mute:#9ba69d;--ac:#e8c21a;--ink:#17140a;
+--sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.6;font-size:1.0625rem}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font:1.0625rem/1.6 var(--sans);background:var(--bg);color:var(--tx)}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--ring);outline-offset:3px}
-.wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
-h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.15}
-h2{font-size:clamp(1.9rem,5vw,2.8rem);margin-bottom:1rem}
+:focus-visible{outline:3px solid var(--ac);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0;background:var(--ac);color:var(--ink);padding:.6rem 1rem;z-index:30}
+.skip:focus{left:0}
+.wrap{max-width:1080px;margin:0 auto;padding:0 1.25rem}
 section{padding:4.5rem 0}
-.lead{max-width:60ch;color:var(--mute);margin-bottom:2.5rem}
-
-/* Navigation */
-header{position:sticky;top:0;z-index:10;background:var(--char-dark);color:#fff}
-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:60px}
-.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;font-weight:700}
-.brand img{width:38px;height:38px;border-radius:6px}
-nav{display:flex;gap:1.2rem;font-size:.95rem}
-nav a{text-decoration:none;opacity:.85}
-nav a:hover{opacity:1;text-decoration:underline}
-@media(max-width:720px){nav a:not(.cta-s){display:none}}
-.cta-s{background:var(--ring);color:var(--ink);padding:.4rem .9rem;border-radius:4px;font-weight:700;opacity:1}
-
-/* Hero */
-.hero{background:var(--char);color:#fff;position:relative;overflow:hidden;padding:5rem 0 5.5rem}
-.hero svg{position:absolute;right:-140px;top:50%;width:620px;max-width:none;transform:translateY(-50%);opacity:.22}
-.hero circle{fill:none;stroke:#fff;stroke-width:22;stroke-linecap:round;animation:draw 1.8s ease-out both}
-.hero circle:nth-child(2){animation-delay:.2s}
-.hero circle:nth-child(3){animation-delay:.4s}
-@keyframes draw{from{stroke-dasharray:0 2000}}
-.hero .wrap{position:relative}
-.hero h1{font-size:clamp(2.4rem,8vw,4.6rem);max-width:15ch;margin-bottom:1.2rem}
-.hero p{max-width:46ch;font-size:1.2rem;color:#e4e4df;margin-bottom:2rem}
+h1,h2,h3{line-height:1.12;letter-spacing:-.015em}
+h2{font-size:clamp(1.9rem,5vw,2.9rem);font-weight:800;margin-bottom:1rem}
+h3{font-size:1.2rem;font-weight:700;margin-bottom:.4rem}
+em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--ac)}
+.lead{max-width:60ch;color:var(--mute);margin-bottom:2.2rem}
+.btn{display:inline-block;padding:.85rem 1.5rem;border-radius:8px;font:inherit;font-weight:700;text-decoration:none;border:2px solid var(--ac);background:var(--ac);color:var(--ink);cursor:pointer}
+.btn:hover{filter:brightness(1.1)}
+.btn.ghost{background:transparent;color:var(--tx);border-color:#4a5a4e}
 .btns{display:flex;flex-wrap:wrap;gap:.8rem}
-.btn{display:inline-block;padding:.85rem 1.5rem;border-radius:4px;font-weight:700;text-decoration:none;border:2px solid var(--ring);background:var(--ring);color:var(--ink)}
-.btn:hover{filter:brightness(1.08)}
-.btn.ghost{background:transparent;color:inherit;border-color:currentColor}
+.card{background:var(--s1);border:1px solid var(--line);border-radius:14px;padding:1.5rem}
 
-/* Ablauf */
-.steps{list-style:none;counter-reset:s;display:grid;gap:0;border-left:3px solid var(--ink);margin-left:.4rem}
-.steps li{counter-increment:s;position:relative;padding:0 0 2rem 2rem}
-.steps li:last-child{padding-bottom:0}
-.steps li::before{content:counter(s);position:absolute;left:-1.3rem;top:-.15rem;width:2.2rem;height:2.2rem;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:700;font-size:.95rem}
-.steps h3{font-size:1.35rem;margin-bottom:.2rem}
-.steps p{max-width:62ch;color:#3a3a37}
-@media(min-width:820px){
-  .steps{grid-template-columns:repeat(3,1fr);border-left:0;margin:0;gap:2.5rem 2rem}
-  .steps li{padding:2.8rem 0 0 0;border-top:3px solid var(--ink)}
-  .steps li::before{left:0;top:-1.15rem}
-}
+header{position:sticky;top:0;z-index:20;background:rgba(11,14,12,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:64px}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;font-weight:800}
+.brand img{width:38px;height:38px;border-radius:8px}
+nav{display:flex;align-items:center;gap:1.4rem;font-size:.95rem}
+nav a{text-decoration:none;color:var(--mute)}
+nav a:hover{color:var(--tx)}
+nav .btn{padding:.5rem 1rem;color:var(--ink)}
+@media(max-width:860px){nav a:not(.btn){display:none}}
 
-/* Methode */
-.method{background:#ebebe6}
-.facts{display:grid;gap:1.2rem;margin-bottom:2.5rem}
-.facts div{border-top:3px solid var(--ink);padding-top:.7rem}
-.facts b{display:block;font-family:var(--serif);font-size:1.3rem}
-.cols{display:grid;gap:2rem}
-.cols h3{font-size:1.4rem;margin-bottom:.5rem}
-@media(min-width:760px){.facts{grid-template-columns:repeat(3,1fr)}.cols{grid-template-columns:1fr 1fr;gap:3rem}}
+.hero{padding:4rem 0 4.5rem}
+.hero .wrap{display:grid;gap:2.5rem;align-items:center}
+.hero h1{font-size:clamp(2.6rem,9vw,4.9rem);font-weight:800;margin-bottom:1.4rem}
+.ticks{list-style:none;display:grid;gap:.6rem;margin-bottom:2rem}
+.ticks li{padding-left:1.8rem;position:relative}
+.ticks li::before{content:"✓";position:absolute;left:0;color:var(--ac);font-weight:800}
+.hero-art{border:1px solid var(--line);border-radius:20px;overflow:hidden;max-width:460px;justify-self:center}
+.hero-art img{display:block;width:100%;height:auto}
+@media(min-width:900px){.hero .wrap{grid-template-columns:1.2fr .8fr}}
 
-/* Preise */
-.price-grid{display:grid;gap:1.5rem}
-.card{background:#fff;border:1px solid var(--line);padding:1.6rem}
-.card h3{font-size:1.5rem;margin-bottom:1rem}
-.row{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;padding:.8rem 0;border-top:1px solid var(--line)}
-.row small{display:block;color:var(--mute)}
-.row strong{font-family:var(--serif);font-size:1.25rem;white-space:nowrap}
-.note{color:var(--mute);font-size:.95rem;margin-top:1rem}
-@media(min-width:820px){.price-grid{grid-template-columns:1.4fr 1fr}.price-grid .stack{display:grid;gap:1.5rem;align-content:start}}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding:0 0 1rem}
+.stats div{border-top:2px solid var(--ac);padding-top:.7rem}
+.stats b{display:block;font-size:2rem;font-weight:800}
+.stats span{color:var(--mute);font-size:.95rem}
+@media(min-width:760px){.stats{grid-template-columns:repeat(4,1fr)}}
 
-/* Team */
-.team{background:var(--char);color:#fff}
-.team .lead{color:#cfcfca}
-.people{display:grid;gap:2.5rem}
-.person{display:flex;gap:1.2rem;align-items:flex-start}
-.avatar{flex:none;width:84px;height:84px;border-radius:50%;background:#fff;color:var(--char);display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:1.7rem}
-.person h3{font-size:1.5rem}
-.person em{display:block;color:var(--ring);font-style:normal;margin-bottom:.4rem}
-.person a{color:#fff}
-@media(min-width:820px){.people{grid-template-columns:1fr 1fr;gap:3rem}}
+.people{display:grid;gap:1.2rem}
+.person{display:flex;gap:1.1rem;align-items:flex-start}
+.avatar{flex:none;width:76px;height:76px;border-radius:50%;background:var(--s2);border:2px solid var(--ac);display:grid;place-items:center;font-weight:800;font-size:1.4rem}
+.person small{display:block;color:var(--ac);margin-bottom:.4rem}
+.person p{color:#cdd4cd}
+@media(min-width:820px){.people{grid-template-columns:1fr 1fr}}
 
-/* Kontakt */
-.contact-list{list-style:none;display:grid;gap:.9rem;margin:1.5rem 0 2rem;font-size:1.15rem}
-.contact-list b{display:inline-block;min-width:6.5rem}
-.contact-list a{font-weight:700}
+.tabs{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1.5rem}
+.tabs button{font:inherit;font-weight:600;padding:.6rem 1.1rem;border-radius:999px;border:1px solid var(--line);background:var(--s1);color:var(--mute);cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--ac);color:var(--ink);border-color:var(--ac)}
+.panel{display:none;max-width:70ch}
+.panel.on{display:block}
+.panel p{color:#cdd4cd;margin-bottom:1.2rem}
 
-footer{background:var(--char-dark);color:#cfcfca;padding:2.5rem 0;font-size:.95rem}
-footer a{color:#fff}
-#impressum,#datenschutz{background:#fff;padding:3rem 0}
-#impressum h2,#datenschutz h2{font-size:1.6rem}
-#impressum p,#datenschutz p{max-width:70ch;margin-bottom:.8rem}
+.inc{display:grid;gap:1rem}
+.inc p{color:var(--mute)}
+@media(min-width:760px){.inc{grid-template-columns:repeat(3,1fr)}}
 
-/* Rechner und Formular */
-.rechner{background:#ebebe6}
-.calc{display:grid;gap:2rem}
+.steps{list-style:none;counter-reset:s;display:grid;gap:1rem}
+.steps li{counter-increment:s;background:var(--s1);border:1px solid var(--line);border-radius:14px;padding:1.5rem}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:2.2rem;height:2.2rem;border-radius:50%;background:var(--ac);color:var(--ink);font-weight:800;margin-bottom:.8rem}
+.steps p{color:var(--mute)}
+@media(min-width:820px){.steps{grid-template-columns:repeat(3,1fr)}}
+
+.seg{display:grid;gap:.8rem;margin-bottom:1rem}
+.seg button{font:inherit;text-align:left;padding:1rem 1.2rem;border-radius:12px;border:2px solid var(--line);background:var(--s1);color:var(--tx);cursor:pointer}
+.seg button[aria-pressed="true"]{border-color:var(--ac);background:var(--s2)}
+.seg b{display:block;font-size:1.15rem}
+.seg span{color:var(--mute);font-size:.95rem}
+.seg.pay{grid-template-columns:1fr 1fr}
+@media(min-width:760px){.seg.dur{grid-template-columns:repeat(3,1fr)}}
+.sum{margin:1.2rem 0}
+.sum strong{font-size:1.8rem;display:block}
+.sum small{color:var(--mute)}
+.extra{display:grid;gap:1rem;margin-top:2rem}
+.row{display:flex;justify-content:space-between;gap:1rem;padding:.6rem 0;border-top:1px solid var(--line)}
+.row strong{white-space:nowrap}
+.note{color:var(--mute);font-size:.92rem;margin-top:.8rem}
+@media(min-width:760px){.extra{grid-template-columns:1fr 1fr}}
+
+details{border-bottom:1px solid var(--line);padding:1rem 0;max-width:780px}
+summary{cursor:pointer;font-weight:700;font-size:1.1rem;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--ac);font-size:1.5rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--mute);margin-top:.7rem}
+
 label{display:block;font-weight:600;margin-bottom:1rem}
-label span.hint{font-weight:400;color:var(--mute);font-size:.9rem}
-input,select,textarea{display:block;width:100%;margin-top:.3rem;padding:.7rem .8rem;font:inherit;border:1px solid #9a9a94;border-radius:4px;background:#fff;color:var(--ink)}
+label .hint{font-weight:400;color:var(--mute);font-size:.9rem}
+input,select,textarea{display:block;width:100%;margin-top:.3rem;padding:.75rem .85rem;font:inherit;border:1px solid var(--line);border-radius:8px;background:var(--s2);color:var(--tx)}
 textarea{resize:vertical}
 .grid2{display:grid;gap:0 1rem;grid-template-columns:1fr 1fr}
 fieldset{border:0;margin:1.5rem 0 1rem}
-legend{font-family:var(--serif);font-weight:700;font-size:1.3rem;margin-bottom:.6rem}
+legend{font-weight:800;font-size:1.25rem;margin-bottom:.6rem}
+.calc{display:grid;gap:2rem}
 .act{display:grid;grid-template-columns:1fr 5.5rem 6rem;gap:.5rem;align-items:center;padding:.5rem 0;border-top:1px solid var(--line);font-size:.95rem}
 .act select{margin:0;padding:.45rem .4rem}
-.act-head{font-size:.85rem;color:var(--mute);border-top:0}
-.result{background:var(--char);color:#fff;padding:1.6rem;display:none}
+.act-head{color:var(--mute);font-size:.85rem;border-top:0}
+.result{display:none;background:var(--s1);border:1px solid var(--ac);border-radius:14px;padding:1.6rem}
 .result.show{display:block}
 .result h3{font-size:1.5rem;margin-bottom:1rem}
 .result table{width:100%;border-collapse:collapse}
-.result td{padding:.55rem 0;border-top:1px solid #5a5a5a}
+.result td{padding:.55rem 0;border-top:1px solid var(--line)}
 .result td:last-child{text-align:right;font-weight:700;white-space:nowrap}
-.result tr.big td{font-family:var(--serif);font-size:1.4rem;color:var(--ring)}
-.result p{color:#cfcfca;font-size:.92rem;margin-top:1rem}
-.err{color:#9b1c1c;font-weight:600;margin-top:.8rem}
-@media(min-width:900px){.calc{grid-template-columns:1.2fr 1fr;align-items:start}.result{position:sticky;top:80px}}
+.result tr.big td{font-size:1.4rem;color:var(--ac)}
+.result p{color:var(--mute);font-size:.92rem;margin-top:1rem}
+.result a{color:var(--ac)}
+.err{color:#ff9b8a;font-weight:600;margin-top:.8rem}
+@media(min-width:900px){.calc{grid-template-columns:1.2fr 1fr;align-items:start}.result{position:sticky;top:90px}}
+.contact-list{list-style:none;display:grid;gap:.8rem;margin:1.5rem 0 2rem;font-size:1.1rem}
+.contact-list b{display:inline-block;min-width:6.5rem}
+.contact-list a{font-weight:700;color:var(--ac)}
 .kform{margin-top:2rem;max-width:620px}
 .check{font-weight:400;font-size:.95rem;display:flex;gap:.6rem;align-items:flex-start}
 .check input{width:auto;margin-top:.35rem}
+.check a{color:var(--ac)}
 #kstatus{margin-top:1rem;font-weight:600}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero circle{animation:none}}
+.alt{background:var(--s1);border-block:1px solid var(--line)}
+#impressum,#datenschutz{background:var(--s1);border-top:1px solid var(--line);padding:3rem 0;color:#cdd4cd}
+#impressum h2,#datenschutz h2{font-size:1.5rem}
+#impressum p,#datenschutz p{max-width:70ch;margin-bottom:.8rem}
+footer{padding:2rem 0;color:var(--mute);font-size:.95rem;border-top:1px solid var(--line)}
+footer a{color:var(--tx)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
-<body>
-
+<body id="top">
+<a class="skip" href="#content">Zum Inhalt springen</a>
 <header>
   <div class="wrap">
     <a class="brand" href="#top"><img src="logo.jpg" alt="Logo 2C Progress Coaching"><span>2C Progress Coaching</span></a>
     <nav aria-label="Hauptnavigation">
-      <a href="#ablauf">Ablauf</a>
-      <a href="#methode">Methode</a>
-      <a href="#preise">Preise</a>
-      <a href="#rechner">Kalorienrechner</a>
-      <a href="#team">Team</a>
-      <a class="cta-s" href="#kontakt">Erstgespräch</a>
+      <a href="#team">Über uns</a><a href="#coaching">Coaching</a><a href="#rechner">Kalorienrechner</a><a href="#preise">Preise</a><a href="#faq">FAQ</a>
+      <a class="btn" href="#preise">Jetzt starten</a>
     </nav>
   </div>
 </header>
-
-<main id="top">
+<main id="content">
   <div class="hero">
-    <svg viewBox="0 0 500 500" aria-hidden="true">
-      <circle cx="250" cy="250" r="200" transform="rotate(-25 250 250)" style="stroke-dasharray:1030 2000"/>
-      <circle cx="250" cy="250" r="150" transform="rotate(-25 250 250)" style="stroke-dasharray:770 2000"/>
-      <circle cx="250" cy="250" r="100" transform="rotate(-25 250 250)" style="stroke-dasharray:520 2000"/>
-    </svg>
     <div class="wrap">
-      <h1>To see progress.</h1>
-      <p>Online-Coaching für Krafttraining und Ernährung: Dein Plan passt zu Deinem Alltag, und jede Woche bekommst Du ein persönliches Video-Feedback von uns.</p>
-      <div class="btns">
-        <a class="btn" href="#kontakt">Unverbindliches Erstgespräch</a>
-        <a class="btn ghost" href="#preise">Preise ansehen</a>
+      <div>
+        <h1>Wir begleiten Dich <em>zu Deinem Ziel</em></h1>
+        <ul class="ticks">
+          <li>Direkter Kontakt mit uns per WhatsApp</li>
+          <li>Wöchentlicher Check-in mit persönlichem Video-Feedback</li>
+          <li>Training und Ernährung, individuell und laufend angepasst</li>
+          <li>Deine Google-Tabelle mit allen Plänen und Tracking-Sheets</li>
+        </ul>
+        <div class="btns"><a class="btn" href="#preise">Jetzt starten</a><a class="btn ghost" href="#coaching">Alle Leistungen</a></div>
       </div>
+      <div class="hero-art"><img src="logo.jpg" alt="2C Progress Coaching – to see progress"></div>
     </div>
   </div>
 
-  <section id="ablauf">
-    <div class="wrap">
-      <h2>Was wir Dir bieten</h2>
-      <p class="lead">Vom ersten Gespräch bis zum Feedback: So läuft Dein Coaching bei uns ab.</p>
-      <ol class="steps">
-        <li><h3>Erstgespräch</h3><p>Persönlich, telefonisch oder per Videokonferenz besprechen wir Deine Ziele und Erwartungen und erarbeiten gemeinsam Deinen Weg zum Erfolg.</p></li>
-        <li><h3>Planerstellung</h3><p>Sobald alle Deine Daten vorliegen, erstellen wir Deinen Trainings- und Ernährungsplan individuell auf Dich zugeschnitten. Bei Bedarf passen wir ihn an.</p></li>
-        <li><h3>Kommunikation</h3><p>Bei Fragen, Anmerkungen oder Unsicherheiten erreichst Du uns jederzeit per WhatsApp. Wir haben immer ein offenes Ohr.</p></li>
-        <li><h3>Feedback</h3><p>Jede Woche erhältst Du ein ausführliches Video-Feedback zu Deinem Check-in. Wir gehen auf alle Fragen ein und erklären jede Plananpassung.</p></li>
-        <li><h3>Videothek</h3><p>Per Video prüfen wir Deine Übungsausführung im Krafttraining. Dazu bekommst Du Zugriff auf eine Videobibliothek zu allen wichtigen Übungen.</p></li>
-        <li><h3>Personaltraining</h3><p>Nach Absprache kannst Du zusätzlich ein Personaltraining buchen, um das Maximum aus Deinen Krafttrainingseinheiten zu holen.</p></li>
-      </ol>
-    </div>
-  </section>
+  <div class="wrap stats">
+    <div><b>13+</b><span>Jahre Kraftsport (Christian)</span></div>
+    <div><b>5+</b><span>Jahre im Fitnessstudio (Corinna)</span></div>
+    <div><b>Wöchentlich</b><span>persönliches Video-Feedback</span></div>
+    <div><b>Direkt</b><span>erreichbar per WhatsApp</span></div>
+  </div>
 
-  <section id="methode" class="method">
+  <section id="team">
     <div class="wrap">
-      <h2>Wie wir coachen</h2>
-      <div class="facts">
-        <div><b>Basis</b>Dein wöchentlicher Check-in</div>
-        <div><b>Programm</b>Google Tabellen (Sheets)</div>
-        <div><b>Feedback</b>Per Video, persönlich und ausführlich</div>
-      </div>
-      <div class="cols">
-        <div>
-          <h3>Deine Daten</h3>
-          <p>Zu Beginn bekommst Du Deine eigene Google-Tabelle mit Deinen persönlichen Daten, Trainingsplan, Ernährungsplan, Supplementplan und Tracking-Sheets. Du und Dein Coach habt jederzeit Zugriff, damit auch kurzfristige Anpassungen möglich sind.</p>
-        </div>
-        <div>
-          <h3>Dein Check-in und Feedback</h3>
-          <p>Am Ende der Woche werten wir Deine Tracking-Tabellen aus, zum Beispiel Gewichtsverlauf, Schlaf, Kalorien, Regeneration und Trainingsleistung. Idealerweise lädst Du wöchentlich Formbilder hoch und nimmst regelmäßig Maße. Im Feedback-Video besprechen wir Deine Tabellen, beantworten Fragen, erklären Anpassungen und analysieren bei Bedarf Deine Trainingsvideos.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="preise">
-    <div class="wrap">
-      <h2>Preise</h2>
-      <p class="lead">Wähle das Paket, das zu Deinem Ziel passt. Alle Pläne sind individuell auf Dich abgestimmt.</p>
-      <div class="price-grid">
-        <div class="card">
-          <h3>Lifestyle Coaching, Komplettpaket</h3>
-          <div class="row"><div>3 Monate<small>oder einmalig im Voraus</small></div><div style="text-align:right"><strong>100 € / Monat</strong><small>280 € einmalig</small></div></div>
-          <div class="row"><div>6 Monate<small>oder einmalig im Voraus</small></div><div style="text-align:right"><strong>90 € / Monat</strong><small>500 € einmalig</small></div></div>
-          <div class="row"><div>12 Monate<small>oder einmalig im Voraus</small></div><div style="text-align:right"><strong>80 € / Monat</strong><small>880 € einmalig</small></div></div>
-          <p class="note">Zuzüglich einmalig 50 € Anmeldegebühr für die Planerstellung.</p>
-        </div>
-        <div class="stack">
-          <div class="card">
-            <h3>Einmalige Planerstellung</h3>
-            <div class="row"><span>Trainingsplan</span><strong>50 €</strong></div>
-            <div class="row"><span>Ernährungsplan</span><strong>50 €</strong></div>
-            <div class="row"><span>Training und Ernährung</span><strong>75 €</strong></div>
-            <p class="note">Individuell auf Dich abgestimmt, aber ohne fortlaufende Anpassungen.</p>
-          </div>
-          <div class="card">
-            <h3>Personaltraining</h3>
-            <div class="row"><span>90 Minuten</span><strong>50 €</strong></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="team" class="team">
-    <div class="wrap">
-      <h2>Dein Coaching-Team</h2>
-      <p class="lead">Wir sind Christian und Corinna, die Gründer von 2C Progress Coaching.</p>
+      <h2>Das sind wir</h2>
+      <p class="lead">Christian und Corinna, die Gründer von 2C Progress Coaching. Du sprichst direkt mit uns.</p>
       <div class="people">
-        <div class="person">
-          <div class="avatar" aria-hidden="true">CS</div>
-          <div>
-            <h3>Christian Scharlach</h3>
-            <em>Owner und Coach</em>
-            <p>Seit über 13 Jahren Kraftsportler. Erfahrung aus unterschiedlichen Coachings, besuchten Seminaren und nebenberuflicher Arbeit als Trainer im Fitnessstudio.</p>
-          </div>
-        </div>
-        <div class="person">
-          <div class="avatar" aria-hidden="true">CW</div>
-          <div>
-            <h3>Corinna Wills</h3>
-            <em>Owner und Coach</em>
-            <p>Seit über fünf Jahren im Fitnessstudio aktiv. Erfahrung aus eigenem Coaching, als Trainerin und als Athletin auf der Bodybuilding-Bühne. Immer bemüht, neues Wissen zu erlangen, anzuwenden und weiterzugeben.</p>
-          </div>
-        </div>
+        <div class="card person"><div class="avatar" aria-hidden="true">CS</div><div><h3>Christian Scharlach</h3><small>Owner und Coach</small><p>Seit über 13 Jahren Kraftsportler. Erfahrung aus unterschiedlichen Coachings, besuchten Seminaren und nebenberuflicher Arbeit als Trainer im Fitnessstudio.</p></div></div>
+        <div class="card person"><div class="avatar" aria-hidden="true">CW</div><div><h3>Corinna Wills</h3><small>Owner und Coach</small><p>Seit über fünf Jahren im Fitnessstudio aktiv. Erfahrung aus eigenem Coaching, als Trainerin und als Athletin auf der Bodybuilding-Bühne. Immer bemüht, neues Wissen zu erlangen, anzuwenden und weiterzugeben.</p></div></div>
       </div>
+    </div>
+  </section>
+
+  <section id="ziel" class="alt">
+    <div class="wrap">
+      <h2>Welches Ziel möchtest Du erreichen?</h2>
+      <div class="tabs" role="tablist" aria-label="Ziele">
+        <button role="tab" aria-selected="true" data-t="0">Muskelaufbau</button>
+        <button role="tab" aria-selected="false" data-t="1">Fettabbau</button>
+        <button role="tab" aria-selected="false" data-t="2">Fitness im Alltag</button>
+      </div>
+      <div class="panel on" role="tabpanel">
+        <h3>Muskeln aufbauen, ohne unnötig Fett anzusetzen</h3>
+        <p>Dein Trainingsplan wird auf Dich zugeschnitten, Deine Ernährung auf Dein Ziel abgestimmt. Über Dein wöchentliches Tracking sehen wir, ob Du Fortschritte machst, und passen den Plan an.</p>
+        <a class="btn" href="#preise">Jetzt starten</a>
+      </div>
+      <div class="panel" role="tabpanel">
+        <h3>Fett verlieren, Muskeln behalten</h3>
+        <p>Wir planen Deine Ernährung so, dass Du sie im Alltag durchhältst. Neben der Waage schauen wir auf Formbilder, Maße und Deine Leistung im Training.</p>
+        <a class="btn" href="#preise">Jetzt starten</a>
+      </div>
+      <div class="panel" role="tabpanel">
+        <h3>Ein Lifestyle, der zu Deinem Alltag passt</h3>
+        <p>Training und Ernährung sollen in Dein Leben passen, nicht umgekehrt. Schlaf, Regeneration und Trainingsleistung tracken wir mit und passen Deinen Plan bei Bedarf an.</p>
+        <a class="btn" href="#preise">Jetzt starten</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="coaching">
+    <div class="wrap">
+      <h2>Das ist in Deinem Coaching enthalten</h2>
+      <div class="inc">
+        <div class="card"><h3>Persönliches Erstgespräch</h3><p>Persönlich, telefonisch oder per Videokonferenz besprechen wir Deine Ziele und Erwartungen.</p></div>
+        <div class="card"><h3>Dein Trainingsplan</h3><p>Individuell auf Dich zugeschnitten und bei Bedarf angepasst.</p></div>
+        <div class="card"><h3>Dein Ernährungsplan</h3><p>Abgestimmt auf Dein Ziel und Deinen Alltag.</p></div>
+        <div class="card"><h3>Supplementplan</h3><p>Teil Deiner Google-Tabelle, gemeinsam mit Plänen und Tracking-Sheets.</p></div>
+        <div class="card"><h3>Wöchentliches Video-Feedback</h3><p>Wir werten Deinen Check-in aus, beantworten Fragen und erklären jede Anpassung.</p></div>
+        <div class="card"><h3>Direkter Draht per WhatsApp</h3><p>Bei Fragen oder Unsicherheiten sind wir für Dich da.</p></div>
+        <div class="card"><h3>Videothek und Technik-Check</h3><p>Wir prüfen Deine Übungsausführung per Video. Dazu bekommst Du eine Videobibliothek zu allen wichtigen Übungen.</p></div>
+        <div class="card"><h3>Deine Google-Tabelle</h3><p>Alle Daten an einem Ort. Du und Dein Coach habt jederzeit Zugriff.</p></div>
+        <div class="card"><h3>Personaltraining</h3><p>Nach Absprache zusätzlich buchbar, um das Maximum aus Deinen Einheiten zu holen.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ablauf" class="alt">
+    <div class="wrap">
+      <h2>So geht es nach dem Start weiter</h2>
+      <ol class="steps">
+        <li><h3>Du startest mit dem Erstgespräch.</h3><p>Wir schauen, wo Du stehst, was Du erreichen willst und wie Dein Trainingsalltag aussieht.</p></li>
+        <li><h3>Wir erstellen Deinen Plan.</h3><p>Sobald alle Deine Daten vorliegen, bauen wir Dein Training und Deine Ernährung darauf auf.</p></li>
+        <li><h3>Wir begleiten Dich.</h3><p>Du setzt den Plan um und schickst jede Woche Deinen Check-in. Wir geben Feedback und passen an.</p></li>
+      </ol>
     </div>
   </section>
 
@@ -325,10 +311,50 @@ legend{font-family:var(--serif);font-weight:700;font-size:1.3rem;margin-bottom:.
       </div>
     </div>
   </section>
-
-  <section id="kontakt">
+  <section id="preise" class="alt">
     <div class="wrap">
-      <h2>Starte jetzt</h2>
+      <h2>Wähle Deine Laufzeit</h2>
+      <p class="lead">Alle Leistungen sind in jedem Paket enthalten. Die Laufzeit ist fest.</p>
+      <div class="seg dur" id="dur">
+        <button type="button" data-m="3" data-mo="100" data-all="280" aria-pressed="false"><b>3 Monate</b><span>100 € pro Monat · 280 € gesamt</span></button>
+        <button type="button" data-m="6" data-mo="90" data-all="500" aria-pressed="true"><b>6 Monate</b><span>90 € pro Monat · 500 € gesamt</span></button>
+        <button type="button" data-m="12" data-mo="80" data-all="880" aria-pressed="false"><b>12 Monate</b><span>80 € pro Monat · 880 € gesamt</span></button>
+      </div>
+      <div class="seg pay" id="pay">
+        <button type="button" data-p="mo" aria-pressed="true"><b>Monatlich zahlen</b></button>
+        <button type="button" data-p="all" aria-pressed="false"><b>Einmalig im Voraus</b></button>
+      </div>
+      <div class="sum" aria-live="polite"><small>Deine Auswahl</small><strong id="sum-main"></strong><small>zuzüglich einmalig 50 € Anmeldegebühr für die Planerstellung</small></div>
+      <div class="btns"><a class="btn" href="#kontakt">Jetzt starten</a><a class="btn ghost" href="#kontakt">Erst kennenlernen</a></div>
+      <div class="extra">
+        <div class="card"><h3>Einmalige Planerstellung</h3>
+          <div class="row"><span>Trainingsplan</span><strong>50 €</strong></div>
+          <div class="row"><span>Ernährungsplan</span><strong>50 €</strong></div>
+          <div class="row"><span>Training und Ernährung</span><strong>75 €</strong></div>
+          <p class="note">Individuell auf Dich abgestimmt, aber ohne fortlaufende Anpassungen.</p></div>
+        <div class="card"><h3>Personaltraining</h3>
+          <div class="row"><span>90 Minuten</span><strong>50 €</strong></div>
+          <p class="note">Nach Bedarf und Absprache.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <h2>Noch etwas offen?</h2>
+      <details><summary>Wie läuft der Start ab?</summary><p>Wir beginnen mit einem unverbindlichen Erstgespräch, persönlich, telefonisch oder per Videokonferenz. Danach erstellen wir Deinen Plan und die Betreuung beginnt.</p></details>
+      <details><summary>Wie laufen die Check-ins ab?</summary><p>Du trägst Deine Werte in Deine Google-Tabelle ein, zum Beispiel Gewichtsverlauf, Schlaf, Kalorien, Regeneration und Trainingsleistung. Idealerweise lädst Du wöchentlich Formbilder hoch und nimmst regelmäßig Maße. Am Ende der Woche werten wir alles aus und schicken Dir ein ausführliches Video-Feedback.</p></details>
+      <details><summary>Wie erreiche ich euch zwischen den Check-ins?</summary><p>Per WhatsApp. Dort kannst Du uns Fragen zu Deinem Plan oder zur Umsetzung schicken.</p></details>
+      <details><summary>Was steht in meiner Google-Tabelle?</summary><p>Deine persönlichen Daten, Trainingsplan, Ernährungsplan, Supplementplan und die Tracking-Sheets. Du und Dein Coach habt jederzeit Zugriff, damit auch kurzfristige Anpassungen möglich sind.</p></details>
+      <details><summary>Wie unterscheiden sich die Zahlungsarten?</summary><p>Du wählst eine feste Laufzeit von 3, 6 oder 12 Monaten und zahlst entweder monatlich oder einmalig im Voraus. Bei Einmalzahlung sparst Du gegenüber der monatlichen Zahlung. Dazu kommt einmalig die Anmeldegebühr von 50 €.</p></details>
+      <details><summary>Brauche ich vorher ein Gespräch?</summary><p>Das Erstgespräch ist unverbindlich. Schreib uns einfach über das Formular, per E-Mail, WhatsApp oder Instagram.</p></details>
+      <details><summary>Ersetzt das Coaching eine ärztliche Beratung?</summary><p>Nein. Bei gesundheitlichen Fragen oder Beschwerden sprich bitte mit Deiner Ärztin oder Deinem Arzt.</p></details>
+    </div>
+  </section>
+
+  <section id="kontakt" class="alt">
+    <div class="wrap">
+      <h2>Lass uns Deine Fragen klären</h2>
       <p class="lead">Du willst die beste Version Deiner selbst werden? Melde Dich bei uns und vereinbare ein unverbindliches Erstgespräch.</p>
       <ul class="contact-list">
         <li><b>E-Mail</b> <a href="mailto:info@2cp-coaching.de">info@2cp-coaching.de</a></li>
@@ -377,7 +403,6 @@ legend{font-family:var(--serif);font-weight:700;font-size:1.3rem;margin-bottom:.
     © 2026 2C Progress Coaching · <a href="#impressum">Impressum</a> · <a href="#datenschutz">Datenschutz</a>
   </div>
 </footer>
-
 <script>
 (function(){
   var acts=[["Ausdauer (Radfahren, Joggen, Crosstrainer)",7],["Fitnesskurse (Aerobic, Zumba)",6],["Krafttraining",5],["Kampfsport",8],["Klettern, Bouldern",7.5],["Mountainbiking",8.5],["Schwimmen",7],["Seilspringen",11],["Teamsport (Fußball, Basketball)",7.5],["Tennis, Squash",7.3],["Walking",3.8],["Yoga",2.8]];
@@ -430,6 +455,21 @@ legend{font-family:var(--serif);font-weight:700;font-size:1.3rem;margin-bottom:.
       .then(function(r){if(!r.ok)throw 0;f.reset();st.textContent='Danke, Deine Anfrage ist bei uns angekommen. Wir melden uns bald bei Dir.';})
       .catch(function(){st.textContent='Das Senden hat nicht geklappt. Schreib uns bitte direkt an info@2cp-coaching.de.';});
   });
+})();
+</script>
+<script>
+(function(){
+  var tabs=document.querySelectorAll('.tabs button'),panels=document.querySelectorAll('.panel');
+  tabs.forEach(function(b){b.addEventListener('click',function(){
+    tabs.forEach(function(x,i){var on=x===b;x.setAttribute('aria-selected',on);panels[i].classList.toggle('on',on);});
+  });});
+  var dur=document.querySelectorAll('#dur button'),pay=document.querySelectorAll('#pay button'),main=document.getElementById('sum-main');
+  function upd(){
+    var d=document.querySelector('#dur [aria-pressed="true"]'),p=document.querySelector('#pay [aria-pressed="true"]').dataset.p;
+    main.textContent=d.dataset.m+' Monate · '+(p==='mo'?d.dataset.mo+' € pro Monat':d.dataset.all+' € einmalig');
+  }
+  function pick(list){list.forEach(function(b){b.addEventListener('click',function(){list.forEach(function(x){x.setAttribute('aria-pressed',x===b);});upd();});});}
+  pick(dur);pick(pay);upd();
 })();
 </script>
 </body>
