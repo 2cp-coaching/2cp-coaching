@@ -34,11 +34,11 @@ header{position:sticky;top:0;z-index:20;background:rgba(11,14,12,.92);backdrop-f
 header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:64px}
 .brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;font-weight:800}
 .brand img{width:38px;height:38px;border-radius:8px}
-nav{display:flex;align-items:center;gap:1.4rem;font-size:.95rem}
+nav{display:flex;align-items:center;gap:1.1rem;font-size:.9rem}
 nav a{text-decoration:none;color:var(--mute)}
 nav a:hover{color:var(--tx)}
 nav .btn{padding:.5rem 1rem;color:var(--ink)}
-@media(max-width:860px){nav a:not(.btn){display:none}}
+@media(max-width:1000px){nav a:not(.btn){display:none}}
 
 .hero{padding:4rem 0 4.5rem}
 .hero .wrap{display:grid;gap:2.5rem;align-items:center}
@@ -125,9 +125,38 @@ legend{font-weight:800;font-size:1.25rem;margin-bottom:.6rem}
 .result a{color:var(--ac)}
 .err{color:#ff9b8a;font-weight:600;margin-top:.8rem}
 @media(min-width:900px){.calc{grid-template-columns:1.2fr 1fr;align-items:start}.result{position:sticky;top:90px}}
+.info{margin-top:3.5rem;max-width:760px}
+.info h3{font-size:1.4rem;margin:2rem 0 .6rem}
+.info p{color:#cdd4cd;margin-bottom:.9rem}
+.info ul{margin:0 0 1rem 1.2rem;color:#cdd4cd}
+.info li{margin-bottom:.4rem}
+.tbl{overflow-x:auto;margin:1rem 0}
+.tbl table{width:100%;border-collapse:collapse;min-width:420px}
+.tbl th,.tbl td{text-align:left;padding:.65rem .8rem;border-bottom:1px solid var(--line)}
+.tbl th{color:var(--ac);font-size:.9rem}
+.krow{display:grid;grid-template-columns:5rem 1fr 2.6rem;gap:.5rem;padding:.6rem 0;border-top:1px solid var(--line);align-items:center}
+.krow select,.krow input{margin:0;padding:.6rem .5rem}
+.krow .k-d{grid-column:1/-1}
+.k-x{font:inherit;font-size:1.3rem;line-height:1;height:2.6rem;border-radius:8px;border:1px solid var(--line);background:var(--s2);color:var(--mute);cursor:pointer}
+.k-x:hover{color:var(--tx);border-color:var(--ac)}
+#kf-add{margin-top:.8rem}
+@media(min-width:560px){.krow{grid-template-columns:1fr 5rem 7.5rem 2.6rem}.krow .k-d{grid-column:auto}}
+.result details{border:0;padding:1rem 0 0;max-width:none}
+.result summary{font-size:1rem;color:var(--ac)}
+#kf-chart svg{width:100%;height:auto;margin-top:.8rem}
+.kc-line{fill:none;stroke:var(--ac);stroke-width:3;stroke-linejoin:round}
+.kc-area{fill:var(--ac);opacity:.16}
+.kc-axis{stroke:var(--line);stroke-width:1}
+.kc-bed{stroke:var(--tx);stroke-width:1.5;stroke-dasharray:4 4}
+.kc-t{fill:var(--mute);font-size:12px;font-family:var(--sans)}
 .contact-list{list-style:none;display:grid;gap:.8rem;margin:1.5rem 0 2rem;font-size:1.1rem}
 .contact-list b{display:inline-block;min-width:6.5rem}
 .contact-list a{font-weight:700;color:var(--ac)}
+.icons{display:flex;gap:1rem;margin:1.5rem 0 2rem}
+.icons a{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;border:2px solid var(--line);background:var(--s2);color:var(--ac);transition:background .2s,color .2s,transform .2s}
+.icons a:hover{background:var(--ac);color:var(--ink);transform:translateY(-3px)}
+.icons svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+@media(prefers-reduced-motion:reduce){.icons a{transition:none}.icons a:hover{transform:none}}
 .kform{margin-top:2rem;max-width:620px}
 .check{font-weight:400;font-size:.95rem;display:flex;gap:.6rem;align-items:flex-start}
 .check input{width:auto;margin-top:.35rem}
@@ -156,6 +185,10 @@ footer a{color:var(--tx)}
 .res-card .tabs{margin:1rem 0 .6rem}
 .res-card h3{font-size:1.5rem;margin-bottom:.8rem}
 .res-text p{color:#cdd4cd;margin-bottom:.8rem}
+.foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem}
+.icons.sm{margin:0;gap:.7rem}
+.icons.sm a{width:42px;height:42px;border-width:1px}
+.icons.sm svg{width:20px;height:20px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
@@ -165,7 +198,7 @@ footer a{color:var(--tx)}
   <div class="wrap">
     <a class="brand" href="#top"><img src="logo.jpg" alt="Logo 2C Progress Coaching"><span>2C Progress Coaching</span></a>
     <nav aria-label="Hauptnavigation">
-      <a href="#team">Über uns</a><a href="#coaching">Coaching</a><a href="#ergebnisse">Ergebnisse</a><a href="#preise">Preise</a><a href="#rechner">Kalorienrechner</a><a href="#faq">FAQ</a>
+      <a href="#team">Über uns</a><a href="#coaching">Coaching</a><a href="#ergebnisse">Ergebnisse</a><a href="#preise">Preise</a><a href="#rechner">Kalorienrechner</a><a href="#koffein">Koffeinrechner</a><a href="#faq">FAQ</a>
       <a class="btn" href="#preise">Jetzt starten</a>
     </nav>
   </div>
@@ -393,7 +426,91 @@ footer a{color:var(--tx)}
     </div>
   </section>
 
-  <section id="faq" class="alt">
+  <section id="koffein" class="alt">
+    <div class="wrap">
+      <h2>Koffeinrechner</h2>
+      <p class="lead">Wie lange wirkt Dein Kaffee? Trag ein, was Du heute getrunken hast, und sieh, wie viel Koffein beim Schlafengehen noch aktiv ist.</p>
+      <div class="calc">
+        <form id="kf" novalidate>
+          <fieldset>
+            <legend>1. Was hast Du heute getrunken?</legend>
+            <div id="kf-rows"></div>
+            <button type="button" class="btn ghost" id="kf-add">Weiteres Getränk hinzufügen</button>
+          </fieldset>
+          <fieldset>
+            <legend>2. Ein paar Angaben zu Dir</legend>
+            <div class="grid2">
+              <label>Körpergewicht in kg<input id="kf-w" type="number" inputmode="decimal" min="30" max="250" step="0.1" required></label>
+              <label>Wann willst Du schlafen?<input id="kf-bed" type="time" value="23:00" required></label>
+            </div>
+            <label>Besonderheiten
+              <select id="kf-sp">
+                <option value="n">Keine</option>
+                <option value="r">Ich rauche (Abbau meist schneller)</option>
+                <option value="p">Ich nehme die Pille (Abbau meist langsamer)</option>
+                <option value="s">Schwanger oder stillend</option>
+              </select>
+            </label>
+            <label class="check"><input type="checkbox" id="kf-minor"><span>Ich bin unter 18 Jahre alt</span></label>
+          </fieldset>
+          <button class="btn" type="submit">Koffein berechnen</button>
+          <p class="err" id="kf-err" role="alert"></p>
+        </form>
+        <div class="result" id="kf-res" aria-live="polite">
+          <h3>Dein Ergebnis</h3>
+          <table>
+            <tr><td>Koffein heute</td><td id="kr-total"></td></tr>
+            <tr class="big"><td>Aktiv beim Schlafen</td><td id="kr-bed"></td></tr>
+            <tr><td>Abgebaut um</td><td id="kr-gone"></td></tr>
+            <tr><td>Angenommene Halbwertszeit</td><td id="kr-hl"></td></tr>
+          </table>
+          <p id="kr-note"></p>
+          <details><summary>Verlauf anzeigen</summary><div id="kf-chart"></div></details>
+          <p>So rechnen wir: Das Koffein wird mit der Halbwertszeit abgebaut, im Mittel etwa 5,7 Stunden (individuell zwischen 3 und 10 Stunden). „Abgebaut“ heißt hier: weniger als 10 mg aktiv. Die Aufnahmephase blenden wir zur Vereinfachung aus. Das ist eine Orientierung und ersetzt keine ärztliche Beratung.</p>
+        </div>
+      </div>
+      <div class="info">
+        <h3>So wirkt Koffein</h3>
+        <p>Nach dem Trinken gelangt das Koffein über den Darm ins Blut. Nach etwa 30 bis 60 Minuten ist die Konzentration am höchsten. Den typischen Kick spürst Du meist zwei bis drei Stunden lang. Danach lässt das Gefühl nach, das Koffein ist aber noch im Körper.</p>
+        <p>Im Gehirn besetzt Koffein die Andockstellen für Adenosin, einen Botenstoff, der Dich müde macht. Solange diese Plätze blockiert sind, merkst Du Deine Müdigkeit schlechter, obwohl sie da ist. Deshalb kannst Du abends erschöpft sein und trotzdem schlecht einschlafen, wenn Du zu spät noch Koffein getrunken hast.</p>
+
+        <h3>Die Halbwertszeit</h3>
+        <p>Die Halbwertszeit gibt an, nach welcher Zeit nur noch die Hälfte einer Substanz im Blut ist. Bei gesunden Erwachsenen liegt sie für Koffein meist zwischen vier und sechs Stunden.</p>
+        <p>Ein Rechenbeispiel mit sechs Stunden: Trinkst Du um 10:00 Uhr ein Getränk mit 120 mg Koffein, sind um 16:00 Uhr noch 60 mg aktiv, um 22:00 Uhr noch 30 mg und um 4:00 Uhr nachts noch 15 mg. Genau diese Kurve nutzt der Rechner oben, um Dir zu zeigen, wann Dein Koffeinspiegel niedrig genug ist.</p>
+
+        <h3>Warum jeder anders abbaut</h3>
+        <p>Abgebaut wird Koffein vor allem in der Leber, mit Hilfe des Enzyms CYP1A2. Die Abbauprodukte scheiden die Nieren über den Urin aus. Wie schnell das Enzym arbeitet, ist von Mensch zu Mensch verschieden:</p>
+        <ul>
+          <li>Veranlagung: Deine Gene bestimmen, ob Du Koffein eher schnell oder eher langsam abbaust.</li>
+          <li>Pille: Hormonelle Verhütungsmittel können die Halbwertszeit ungefähr verdoppeln.</li>
+          <li>Rauchen: Raucher bauen Koffein oft deutlich schneller ab, teils bis zu 50 % schneller.</li>
+          <li>Schwangerschaft: Der Abbau läuft deutlich langsamer, deshalb gelten niedrigere Richtwerte.</li>
+        </ul>
+
+        <h3>Richtwerte und Koffeingehalte</h3>
+        <p>Die Europäische Behörde für Lebensmittelsicherheit (EFSA) hält für gesunde Erwachsene bis zu 400 mg Koffein pro Tag für unbedenklich, einzelne Portionen bis etwa 200 mg. Schwangere und Stillende sollten bei höchstens 200 mg pro Tag bleiben. Mit diesen Durchschnittswerten rechnet der Koffeinrechner:</p>
+        <div class="tbl"><table>
+          <thead><tr><th>Getränk</th><th>Menge</th><th>Koffein (ca.)</th></tr></thead>
+          <tbody>
+            <tr><td>Filterkaffee</td><td>1 Tasse (200 ml)</td><td>90 mg</td></tr>
+            <tr><td>Espresso</td><td>1 Shot (30 ml)</td><td>63 mg</td></tr>
+            <tr><td>Doppelter Espresso</td><td>2 Shots</td><td>126 mg</td></tr>
+            <tr><td>Energy Drink</td><td>1 Dose (250 ml)</td><td>80 mg</td></tr>
+            <tr><td>Energy Drink</td><td>1 Dose (500 ml)</td><td>160 mg</td></tr>
+            <tr><td>Pre Workout</td><td>halbe Portion</td><td>100 mg</td></tr>
+            <tr><td>Pre Workout</td><td>1 Portion</td><td>200 mg</td></tr>
+            <tr><td>Pre Workout stark</td><td>1 Portion</td><td>300 mg</td></tr>
+            <tr><td>Schwarzer Tee</td><td>1 Tasse (200 ml)</td><td>45 mg</td></tr>
+            <tr><td>Grüner Tee</td><td>1 Tasse (200 ml)</td><td>30 mg</td></tr>
+            <tr><td>Cola</td><td>1 Dose (330 ml)</td><td>35 mg</td></tr>
+          </tbody>
+        </table></div>
+        <p class="note">Das sind Durchschnittswerte. Der tatsächliche Gehalt schwankt je nach Produkt und Zubereitung. Bei Pre-Workout-Produkten gilt die Angabe auf der Verpackung.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
     <div class="wrap">
       <h2>Noch etwas offen?</h2>
       <details><summary>Wie läuft der Start ab?</summary><p>Wir beginnen mit einem unverbindlichen Erstgespräch, persönlich, telefonisch oder per Videokonferenz. Danach erstellen wir Deinen Plan und die Betreuung beginnt.</p></details>
@@ -406,15 +523,21 @@ footer a{color:var(--tx)}
     </div>
   </section>
 
-  <section id="kontakt">
+  <section id="kontakt" class="alt">
     <div class="wrap">
       <h2>Lass uns Deine Fragen klären</h2>
       <p class="lead">Du willst die beste Version Deiner selbst werden? Melde Dich bei uns und vereinbare ein unverbindliches Erstgespräch.</p>
-      <ul class="contact-list">
-        <li><b>E-Mail</b> <a href="mailto:info@2cp-coaching.de">info@2cp-coaching.de</a></li>
-        <li><b>WhatsApp</b> <a href="https://wa.me/4915140187097">0151 40187097</a></li>
-        <li><b>Instagram</b> <a href="https://www.instagram.com/2cp_coaching" rel="noopener">@2cp_coaching</a></li>
-      </ul>
+      <div class="icons">
+        <a href="mailto:info@2cp-coaching.de" aria-label="E-Mail an 2C Progress Coaching schreiben" title="E-Mail">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        </a>
+        <a href="https://wa.me/4915140187097" aria-label="Per WhatsApp schreiben" title="WhatsApp" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21l1.65-4.9A8.5 8.5 0 1 1 8 19.4L3 21z"/><path d="M9 9.2c0 3 2.6 5.6 5.6 5.6l1.2-1.4-2-1-.8.7c-1-.4-1.9-1.3-2.3-2.3l.7-.8-1-2L9 9.2z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/2cp_coaching" aria-label="2C Progress Coaching auf Instagram" title="Instagram" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
       <form id="kform" class="kform" action="https://formspree.io/f/xbggdrkj" method="POST">
         <label>Name<input name="name" required autocomplete="name"></label>
         <label>E-Mail<input type="email" name="email" required autocomplete="email"></label>
@@ -436,10 +559,10 @@ footer a{color:var(--tx)}
   <div class="wrap">
     <h2>Impressum</h2>
     <h3>Angaben gemäß § 5 DDG</h3>
-    <p>2C Progress Coaching GbR<br>Am Alten Gericht 19<br>37269 Eschwege</p>
+    <p>2C Progress Coaching GbR<br>Am Alten Gericht 19<br>37269 Eschwege<br>Deutschland</p>
     <p>Vertreten durch die Gesellschafter:<br>Christian Scharlach und Corinna Wills</p>
     <h3>Kontakt</h3>
-    <p>Telefon: 0151 40187097<br>E-Mail: <a href="mailto:info@2cp-coaching.de">info@2cp-coaching.de</a></p>
+    <p>Telefon: +49 151 40187097<br>E-Mail: <a href="mailto:info@2cp-coaching.de">info@2cp-coaching.de</a></p>
     <h3>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h3>
     <p>Christian Scharlach und Corinna Wills, Anschrift wie oben.</p>
     <h3>Verbraucherstreitbeilegung</h3>
@@ -455,7 +578,7 @@ footer a{color:var(--tx)}
     <p>Hier erfährst Du, welche personenbezogenen Daten wir auf dieser Webseite verarbeiten und wofür.</p>
 
     <h3>1. Verantwortlicher</h3>
-    <p>2C Progress Coaching GbR, Am Alten Gericht 19, 37269 Eschwege<br>Vertreten durch Christian Scharlach und Corinna Wills<br>Telefon: 0151 40187097 · E-Mail: <a href="mailto:info@2cp-coaching.de">info@2cp-coaching.de</a></p>
+    <p>2C Progress Coaching GbR, Am Alten Gericht 19, 37269 Eschwege, Deutschland<br>Vertreten durch Christian Scharlach und Corinna Wills<br>Telefon: +49 151 40187097 · E-Mail: <a href="mailto:info@2cp-coaching.de">info@2cp-coaching.de</a></p>
 
     <h3>2. Hosting über GitHub Pages</h3>
     <p>Diese Webseite wird über GitHub Pages bereitgestellt. Anbieter ist GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA (ein Unternehmen von Microsoft). Beim Aufruf der Seite verarbeitet GitHub technisch notwendige Verbindungsdaten, insbesondere Deine IP-Adresse, Datum und Uhrzeit, die aufgerufene Seite sowie Browser- und Betriebssysteminformationen. GitHub protokolliert IP-Adressen nach eigenen Angaben aus Sicherheitsgründen.</p>
@@ -469,8 +592,8 @@ footer a{color:var(--tx)}
     <h3>4. Kontakt per E-Mail, Telefon, WhatsApp oder Instagram</h3>
     <p>Wenn Du uns schreibst oder anrufst, verarbeiten wir Deine Angaben, um Dein Anliegen zu bearbeiten (Art. 6 Abs. 1 lit. b oder f DSGVO). WhatsApp und Instagram werden von Meta Platforms Ireland Limited betrieben. Die Links dazu auf dieser Seite führen erst nach Deinem Klick zu diesen Diensten, dort gelten deren eigene Datenschutzbestimmungen.</p>
 
-    <h3>5. Kalorienrechner</h3>
-    <p>Die Berechnung läuft ausschließlich in Deinem Browser. Deine Eingaben werden weder gespeichert noch an uns oder Dritte übertragen.</p>
+    <h3>5. Kalorien- und Koffeinrechner</h3>
+    <p>Die Berechnungen laufen ausschließlich in Deinem Browser. Deine Eingaben werden weder gespeichert noch an uns oder Dritte übertragen.</p>
 
     <h3>6. Kundenerfolge und Fotos</h3>
     <p>Im Bereich „Ergebnisse“ zeigen wir Vorher-nachher-Fotos und Angaben von Kunden. Das geschieht nur mit deren ausdrücklicher Einwilligung (Art. 6 Abs. 1 lit. a und Art. 9 Abs. 2 lit. a DSGVO). Die Einwilligung kann jederzeit mit Wirkung für die Zukunft widerrufen werden. Wir entfernen die Inhalte dann von der Seite.</p>
@@ -500,8 +623,9 @@ footer a{color:var(--tx)}
 </section>
 
 <footer>
-  <div class="wrap">
-    © 2026 2C Progress Coaching GbR · <a href="#impressum">Impressum</a> · <a href="#datenschutz">Datenschutz</a>
+  <div class="wrap foot">
+    <div>© 2026 2C Progress Coaching GbR · <a href="#impressum">Impressum</a> · <a href="#datenschutz">Datenschutz</a></div>
+    <div class="icons sm"><a href="mailto:info@2cp-coaching.de" aria-label="E-Mail an 2C Progress Coaching schreiben" title="E-Mail"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a><a href="https://wa.me/4915140187097" aria-label="Per WhatsApp schreiben" title="WhatsApp" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21l1.65-4.9A8.5 8.5 0 1 1 8 19.4L3 21z"/><path d="M9 9.2c0 3 2.6 5.6 5.6 5.6l1.2-1.4-2-1-.8.7c-1-.4-1.9-1.3-2.3-2.3l.7-.8-1-2L9 9.2z"/></svg></a><a href="https://www.instagram.com/2cp_coaching" aria-label="2C Progress Coaching auf Instagram" title="Instagram" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></div>
   </div>
 </footer>
 <script>
@@ -579,6 +703,79 @@ footer a{color:var(--tx)}
   btns.forEach(function(b,i){b.addEventListener('click',function(){
     btns.forEach(function(x,j){x.setAttribute('aria-pressed',j===i);imgs[j].classList.toggle('on',j===i);});
   });});
+})();
+</script>
+<script>
+(function(){
+  var D=[["Filterkaffee (200 ml)",90],["Espresso (30 ml)",63],["Doppelter Espresso",126],["Energy Drink (250 ml)",80],["Energy Drink (500 ml)",160],["Pre Workout (halbe Portion)",100],["Pre Workout",200],["Pre Workout stark",300],["Schwarzer Tee (200 ml)",45],["Grüner Tee (200 ml)",30],["Cola (330 ml)",35]];
+  var $=function(id){return document.getElementById(id)};
+  var rows=$('kf-rows');
+  function pad(n){return (n<10?'0':'')+n}
+  function hm(v){var a=v.split(':');return (+a[0])*60+(+a[1])}
+  function clock(m){var x=((m%1440)+1440)%1440;return pad(Math.floor(x/60))+':'+pad(x%60)}
+  function addRow(di,n,t){
+    var r=document.createElement('div');r.className='krow';
+    var o='';D.forEach(function(d,i){o+='<option value="'+d[1]+'"'+(i===di?' selected':'')+'>'+d[0]+' · '+d[1]+' mg</option>'});
+    var c='';for(var k=1;k<=6;k++)c+='<option value="'+k+'"'+(k===n?' selected':'')+'>'+k+'×</option>';
+    r.innerHTML='<select class="k-d" aria-label="Getränk">'+o+'</select><select class="k-n" aria-label="Anzahl">'+c+'</select><input class="k-t" type="time" value="'+t+'" aria-label="Uhrzeit"><button type="button" class="k-x" aria-label="Getränk entfernen">×</button>';
+    r.querySelector('.k-x').addEventListener('click',function(){if(rows.children.length>1)rows.removeChild(r)});
+    rows.appendChild(r);
+  }
+  addRow(0,1,'08:00');
+  $('kf-add').addEventListener('click',function(){addRow(0,1,'12:00')});
+
+  $('kf').addEventListener('submit',function(e){
+    e.preventDefault();
+    var err=$('kf-err'),res=$('kf-res');
+    var w=+$('kf-w').value,bedv=$('kf-bed').value,sp=$('kf-sp').value,minor=$('kf-minor').checked;
+    var doses=[],bad=false;
+    rows.querySelectorAll('.krow').forEach(function(r){
+      var tv=r.querySelector('.k-t').value;
+      if(!tv){bad=true;return}
+      doses.push({t:hm(tv),mg:(+r.querySelector('.k-d').value)*(+r.querySelector('.k-n').value)});
+    });
+    if(bad||!bedv||!(w>=30&&w<=250)){
+      err.textContent='Bitte gib bei jedem Getränk eine Uhrzeit sowie Dein Gewicht (30–250 kg) und Deine Schlafenszeit an.';
+      res.classList.remove('show');return;
+    }
+    err.textContent='';
+    var T={n:5.7,r:3.8,p:10,s:10}[sp];
+    function conc(t){var x=0;doses.forEach(function(d){if(t>=d.t)x+=d.mg*Math.pow(0.5,(t-d.t)/60/T)});return x}
+    var total=0,first=1e9,last=-1;
+    doses.forEach(function(d){total+=d.mg;first=Math.min(first,d.t);last=Math.max(last,d.t)});
+    var bed=hm(bedv);if(bed<240)bed+=1440;if(bed<last)bed+=1440;
+    var atBed=conc(bed);
+    var g=last;while(conc(g)>10&&g<last+6000)g+=5;
+    var dayLim=sp==='s'?200:(minor?3*w:400),oneLim=sp==='s'?200:(minor?3*w:200);
+    var single=doses.some(function(d){return d.mg>oneLim});
+    var late=doses.some(function(d){return d.t>bed});
+    var days=Math.floor(g/1440);
+    $('kr-total').textContent=Math.round(total)+' mg';
+    $('kr-bed').textContent=Math.round(atBed)+' mg';
+    $('kr-gone').textContent=clock(g)+' Uhr'+(days===1?' (morgen)':days>=2?' (in '+days+' Tagen)':'');
+    $('kr-hl').textContent=String(T).replace('.',',')+' h';
+    var n=[];
+    n.push(atBed>50?'Beim Schlafengehen sind noch rund '+Math.round(atBed)+' mg aktiv. Das kann das Einschlafen und den Tiefschlaf stören. Trink Deinen letzten Kaffee früher.':'Beim Schlafengehen sind nur noch rund '+Math.round(atBed)+' mg aktiv. Das dürfte Deinen Schlaf wenig stören.');
+    if(total>dayLim)n.push('Du liegst über dem Richtwert von '+Math.round(dayLim)+' mg pro Tag (EFSA).');
+    if(single)n.push('Eine einzelne Aufnahme liegt über '+Math.round(oneLim)+' mg. Verteile Deine Getränke besser über den Tag.');
+    if(late)n.push('Getränke nach der Schlafenszeit zählen nicht für den Wert beim Schlafen.');
+    $('kr-note').textContent=n.join(' ');
+
+    var x0=Math.max(0,first-60),x1=Math.min(Math.max(g,bed)+60,x0+2880),pts=[],ymax=0,t,c;
+    for(t=x0;t<=x1;t+=10){c=conc(t);ymax=Math.max(ymax,c);pts.push([t,c])}
+    ymax=Math.max(ymax,20)*1.1;
+    var X=function(v){return 40+(v-x0)/(x1-x0)*540},Y=function(v){return 190-v/ymax*170};
+    var line=pts.map(function(q,i){return(i?'L':'M')+X(q[0]).toFixed(1)+' '+Y(q[1]).toFixed(1)}).join('');
+    var svg='<svg viewBox="0 0 600 230" role="img" aria-label="Verlauf der Koffeinmenge im Körper über den Tag">'+
+      '<path class="kc-area" d="'+line+'L'+X(x1).toFixed(1)+' 190L'+X(x0).toFixed(1)+' 190Z"/>'+
+      '<line class="kc-axis" x1="40" y1="190" x2="580" y2="190"/>'+
+      '<path class="kc-line" d="'+line+'"/>';
+    if(bed>=x0&&bed<=x1)svg+='<line class="kc-bed" x1="'+X(bed).toFixed(1)+'" y1="20" x2="'+X(bed).toFixed(1)+'" y2="190"/><text class="kc-t" x="'+X(bed).toFixed(1)+'" y="14" text-anchor="middle">Schlafen</text>';
+    svg+='<text class="kc-t" x="40" y="212">'+clock(x0)+'</text><text class="kc-t" x="580" y="212" text-anchor="end">'+clock(x1)+'</text><text class="kc-t" x="36" y="26" text-anchor="end">'+Math.round(ymax/1.1)+' mg</text></svg>';
+    $('kf-chart').innerHTML=svg;
+    res.classList.add('show');
+    if(window.matchMedia('(max-width:899px)').matches)res.scrollIntoView({behavior:'smooth',block:'start'});
+  });
 })();
 </script>
 </body>
