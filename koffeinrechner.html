@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Koffeinrechner – Wie lange wirkt Koffein? | 2C Progress Coaching</title>
+<meta name="description" content="Koffeinrechner: Trag Kaffee, Energy Drink und Pre Workout ein und sieh, wie viel Koffein beim Schlafengehen noch in Deinem Körper aktiv ist.">
+<link rel="canonical" href="https://www.2cp-coaching.com/koffeinrechner.html">
+<meta name="theme-color" content="#0b0e0c">
+<link rel="icon" href="logo.jpg">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="2C Progress Coaching">
+<meta property="og:title" content="Koffeinrechner – Wie lange wirkt Koffein? | 2C Progress Coaching">
+<meta property="og:description" content="Koffeinrechner: Trag Kaffee, Energy Drink und Pre Workout ein und sieh, wie viel Koffein beim Schlafengehen noch in Deinem Körper aktiv ist.">
+<meta property="og:url" content="https://www.2cp-coaching.com/koffeinrechner.html">
+<meta property="og:image" content="https://www.2cp-coaching.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="2C Progress Coaching – to see progress">
+<meta name="twitter:card" content="summary_large_image">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+<a class="skip" href="#content">Zum Inhalt springen</a>
+<header>
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="logo.jpg" alt="Logo 2C Progress Coaching" width="38" height="38"><span>2C Progress Coaching</span></a>
+    <button type="button" class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Menü öffnen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <nav id="nav" aria-label="Hauptnavigation">
+      <a href="index.html#team">Über uns</a><a href="index.html#coaching">Coaching</a><a href="index.html#ergebnisse">Ergebnisse</a><a href="index.html#preise">Preise</a><a href="kalorienrechner.html">Kalorienrechner</a><a href="koffeinrechner.html" class="on" aria-current="page">Koffeinrechner</a><a href="faq.html">FAQ</a>
+      <a class="btn" href="index.html#preise">Jetzt starten</a>
+    </nav>
+  </div>
+</header>
+<main id="content">
+<section id="koffein">
+    <div class="wrap">
+      <h1 class="h1">Koffeinrechner</h1>
+      <p class="lead">Wie lange wirkt Dein Kaffee? Trag ein, was Du heute getrunken hast, und sieh, wie viel Koffein beim Schlafengehen noch aktiv ist.</p>
+      <div class="calc">
+        <form id="kf" novalidate>
+          <fieldset>
+            <legend>1. Was hast Du heute getrunken?</legend>
+            <div id="kf-rows"></div>
+            <button type="button" class="btn ghost" id="kf-add">Weiteres Getränk hinzufügen</button>
+          </fieldset>
+          <fieldset>
+            <legend>2. Ein paar Angaben zu Dir</legend>
+            <div class="grid2">
+              <label>Körpergewicht in kg<input id="kf-w" type="number" inputmode="decimal" min="30" max="250" step="0.1" required></label>
+              <label>Wann willst Du schlafen?<input id="kf-bed" type="time" value="23:00" required></label>
+            </div>
+            <label>Besonderheiten
+              <select id="kf-sp">
+                <option value="n">Keine</option>
+                <option value="r">Ich rauche (Abbau meist schneller)</option>
+                <option value="p">Ich nehme die Pille (Abbau meist langsamer)</option>
+                <option value="s">Schwanger oder stillend</option>
+              </select>
+            </label>
+            <label class="check"><input type="checkbox" id="kf-minor"><span>Ich bin unter 18 Jahre alt</span></label>
+          </fieldset>
+          <button class="btn" type="submit">Koffein berechnen</button>
+          <p class="err" id="kf-err" role="alert"></p>
+        </form>
+        <div class="result" id="kf-res" aria-live="polite">
+          <h3>Dein Ergebnis</h3>
+          <table>
+            <tr><td>Koffein heute</td><td id="kr-total"></td></tr>
+            <tr class="big"><td>Aktiv beim Schlafen</td><td id="kr-bed"></td></tr>
+            <tr><td>Abgebaut um</td><td id="kr-gone"></td></tr>
+            <tr><td>Angenommene Halbwertszeit</td><td id="kr-hl"></td></tr>
+          </table>
+          <p id="kr-note"></p>
+          <details><summary>Verlauf anzeigen</summary><div id="kf-chart"></div></details>
+          <p>So rechnen wir: Das Koffein wird mit der Halbwertszeit abgebaut, im Mittel etwa 5,7 Stunden (individuell zwischen 3 und 10 Stunden). „Abgebaut“ heißt hier: weniger als 10 mg aktiv. Die Aufnahmephase blenden wir zur Vereinfachung aus. Das ist eine Orientierung und ersetzt keine ärztliche Beratung.</p>
+        </div>
+      </div>
+      <div class="info">
+        <h3>So wirkt Koffein</h3>
+        <p>Nach dem Trinken gelangt das Koffein über den Darm ins Blut. Nach etwa 30 bis 60 Minuten ist die Konzentration am höchsten. Den typischen Kick spürst Du meist zwei bis drei Stunden lang. Danach lässt das Gefühl nach, das Koffein ist aber noch im Körper.</p>
+        <p>Im Gehirn besetzt Koffein die Andockstellen für Adenosin, einen Botenstoff, der Dich müde macht. Solange diese Plätze blockiert sind, merkst Du Deine Müdigkeit schlechter, obwohl sie da ist. Deshalb kannst Du abends erschöpft sein und trotzdem schlecht einschlafen, wenn Du zu spät noch Koffein getrunken hast.</p>
+
+        <h3>Die Halbwertszeit</h3>
+        <p>Die Halbwertszeit gibt an, nach welcher Zeit nur noch die Hälfte einer Substanz im Blut ist. Bei gesunden Erwachsenen liegt sie für Koffein meist zwischen vier und sechs Stunden.</p>
+        <p>Ein Rechenbeispiel mit sechs Stunden: Trinkst Du um 10:00 Uhr ein Getränk mit 120 mg Koffein, sind um 16:00 Uhr noch 60 mg aktiv, um 22:00 Uhr noch 30 mg und um 4:00 Uhr nachts noch 15 mg. Genau diese Kurve nutzt der Rechner oben, um Dir zu zeigen, wann Dein Koffeinspiegel niedrig genug ist.</p>
+
+        <h3>Warum jeder anders abbaut</h3>
+        <p>Abgebaut wird Koffein vor allem in der Leber, mit Hilfe des Enzyms CYP1A2. Die Abbauprodukte scheiden die Nieren über den Urin aus. Wie schnell das Enzym arbeitet, ist von Mensch zu Mensch verschieden:</p>
+        <ul>
+          <li>Veranlagung: Deine Gene bestimmen, ob Du Koffein eher schnell oder eher langsam abbaust.</li>
+          <li>Pille: Hormonelle Verhütungsmittel können die Halbwertszeit ungefähr verdoppeln.</li>
+          <li>Rauchen: Raucher bauen Koffein oft deutlich schneller ab, teils bis zu 50 % schneller.</li>
+          <li>Schwangerschaft: Der Abbau läuft deutlich langsamer, deshalb gelten niedrigere Richtwerte.</li>
+        </ul>
+
+        <h3>Richtwerte und Koffeingehalte</h3>
+        <p>Die Europäische Behörde für Lebensmittelsicherheit (EFSA) hält für gesunde Erwachsene bis zu 400 mg Koffein pro Tag für unbedenklich, einzelne Portionen bis etwa 200 mg. Schwangere und Stillende sollten bei höchstens 200 mg pro Tag bleiben. Mit diesen Durchschnittswerten rechnet der Koffeinrechner:</p>
+        <div class="tbl"><table>
+          <thead><tr><th>Getränk</th><th>Menge</th><th>Koffein (ca.)</th></tr></thead>
+          <tbody>
+            <tr><td>Filterkaffee</td><td>1 Tasse (200 ml)</td><td>90 mg</td></tr>
+            <tr><td>Espresso</td><td>1 Shot (30 ml)</td><td>63 mg</td></tr>
+            <tr><td>Doppelter Espresso</td><td>2 Shots</td><td>126 mg</td></tr>
+            <tr><td>Energy Drink</td><td>1 Dose (250 ml)</td><td>80 mg</td></tr>
+            <tr><td>Energy Drink</td><td>1 Dose (500 ml)</td><td>160 mg</td></tr>
+            <tr><td>Pre Workout</td><td>halbe Portion</td><td>100 mg</td></tr>
+            <tr><td>Pre Workout</td><td>1 Portion</td><td>200 mg</td></tr>
+            <tr><td>Pre Workout stark</td><td>1 Portion</td><td>300 mg</td></tr>
+            <tr><td>Schwarzer Tee</td><td>1 Tasse (200 ml)</td><td>45 mg</td></tr>
+            <tr><td>Grüner Tee</td><td>1 Tasse (200 ml)</td><td>30 mg</td></tr>
+            <tr><td>Cola</td><td>1 Dose (330 ml)</td><td>35 mg</td></tr>
+          </tbody>
+        </table></div>
+        <p class="note">Das sind Durchschnittswerte. Der tatsächliche Gehalt schwankt je nach Produkt und Zubereitung. Bei Pre-Workout-Produkten gilt die Angabe auf der Verpackung.</p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap foot">
+    <div>© 2026 2C Progress Coaching GbR · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="agb.html">AGB</a> · <a href="widerruf.html">Widerruf</a></div>
+    <div class="icons sm"><a href="mailto:info@2cp-coaching.de" aria-label="E-Mail an 2C Progress Coaching schreiben" title="E-Mail"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a><a href="https://wa.me/4915140187097" aria-label="Per WhatsApp schreiben" title="WhatsApp" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21l1.65-4.9A8.5 8.5 0 1 1 8 19.4L3 21z"/><path d="M9 9.2c0 3 2.6 5.6 5.6 5.6l1.2-1.4-2-1-.8.7c-1-.4-1.9-1.3-2.3-2.3l.7-.8-1-2L9 9.2z"/></svg></a><a href="https://www.instagram.com/2cp_coaching" aria-label="2C Progress Coaching auf Instagram" title="Instagram" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></div>
+  </div>
+</footer>
+<a class="wa-float" href="https://wa.me/4915140187097" rel="noopener" aria-label="Per WhatsApp schreiben" title="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21l1.65-4.9A8.5 8.5 0 1 1 8 19.4L3 21z"/><path d="M9 9.2c0 3 2.6 5.6 5.6 5.6l1.2-1.4-2-1-.8.7c-1-.4-1.9-1.3-2.3-2.3l.7-.8-1-2L9 9.2z"/></svg></a>
+<div class="cta-bar"><a class="btn" href="index.html#kontakt">Unverbindliches Erstgespräch</a></div>
+<script src="site.js" defer></script>
+<script src="koffeinrechner.js" defer></script>
+</body>
+</html>

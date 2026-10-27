@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kalorienrechner – Kalorienbedarf und Makros berechnen | 2C Progress Coaching</title>
+<meta name="description" content="Kostenloser Kalorienrechner: Grundumsatz, Tagesbedarf und Makronährstoffe für Muskelaufbau, Fettabbau oder Gewicht halten berechnen.">
+<link rel="canonical" href="https://www.2cp-coaching.com/kalorienrechner.html">
+<meta name="theme-color" content="#0b0e0c">
+<link rel="icon" href="logo.jpg">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="2C Progress Coaching">
+<meta property="og:title" content="Kalorienrechner – Kalorienbedarf und Makros berechnen | 2C Progress Coaching">
+<meta property="og:description" content="Kostenloser Kalorienrechner: Grundumsatz, Tagesbedarf und Makronährstoffe für Muskelaufbau, Fettabbau oder Gewicht halten berechnen.">
+<meta property="og:url" content="https://www.2cp-coaching.com/kalorienrechner.html">
+<meta property="og:image" content="https://www.2cp-coaching.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="2C Progress Coaching – to see progress">
+<meta name="twitter:card" content="summary_large_image">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+<a class="skip" href="#content">Zum Inhalt springen</a>
+<header>
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="logo.jpg" alt="Logo 2C Progress Coaching" width="38" height="38"><span>2C Progress Coaching</span></a>
+    <button type="button" class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Menü öffnen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <nav id="nav" aria-label="Hauptnavigation">
+      <a href="index.html#team">Über uns</a><a href="index.html#coaching">Coaching</a><a href="index.html#ergebnisse">Ergebnisse</a><a href="index.html#preise">Preise</a><a href="kalorienrechner.html" class="on" aria-current="page">Kalorienrechner</a><a href="koffeinrechner.html">Koffeinrechner</a><a href="faq.html">FAQ</a>
+      <a class="btn" href="index.html#preise">Jetzt starten</a>
+    </nav>
+  </div>
+</header>
+<main id="content">
+<section id="rechner" class="calcpage">
+    <div class="wrap">
+      <h1 class="h1">Kalorienrechner</h1>
+      <p class="lead">Deinen täglichen Kalorienbedarf ganz einfach berechnen</p>
+      <div class="info top">
+        <p>Ob Du abnehmen oder Muskeln aufbauen willst: Am Anfang steht die Frage, wie viele Kalorien Dein Körper täglich braucht und wie Du sie auf Eiweiß, Fett und Kohlenhydrate verteilst.</p>
+        <p>Dein Körper verbraucht den ganzen Tag Energie, im Beruf, im Training und in der Freizeit. Nimmst Du dauerhaft mehr Energie auf, als Du verbrauchst, speichert er den Überschuss als Körperfett. Nimmst Du weniger auf, greift er auf seine Reserven zurück. Wer seinen Bedarf kennt, kann deshalb gezielt steuern, ob er zunimmt, abnimmt oder sein Gewicht hält.</p>
+        <h3>Dein Bedarf in wenigen Schritten</h3>
+        <p>Gib Deine Körperdaten, Deinen Beruf und Deinen Sport ein. Der Rechner schätzt daraus Deinen Tagesbedarf und passt ihn an Dein Ziel an. Das Ergebnis ist eine Orientierung, die wir im Coaching laufend an Deinen Fortschritt anpassen.</p>
+      </div>
+      <div class="calc">
+        <form id="calc" novalidate>
+          <label>Geschlecht
+            <select id="c-sex" required><option value="">Bitte wählen</option><option value="m">Männlich</option><option value="w">Weiblich</option></select>
+          </label>
+          <div class="grid2">
+            <label>Größe in cm<input id="c-h" type="number" inputmode="numeric" min="120" max="230" required></label>
+            <label>Gewicht in kg<input id="c-w" type="number" inputmode="decimal" min="35" max="250" step="0.1" required></label>
+            <label>Alter<input id="c-a" type="number" inputmode="numeric" min="16" max="80" required></label>
+            <div class="bfwrap"><label>Körperfett in % <span class="hint">(optional)</span><input id="c-bf" type="number" inputmode="decimal" min="4" max="60" step="0.5"></label><button type="button" class="linkbtn" id="bf-help">Ich bin mir nicht sicher</button></div>
+          </div>
+          <label>Beruf und Tätigkeit
+            <select id="c-pal" required>
+              <option value="">Bitte wählen</option>
+              <option value="1.2">Überwiegend sitzend (Büro, Schule, Studium)</option>
+              <option value="1.4">Sitzend, auch stehend oder gehend (Fahrer, Fließband)</option>
+              <option value="1.6">Überwiegend stehend oder gehend (Verkauf, Handwerk)</option>
+              <option value="1.8">Körperlich anstrengend (Bau, Leistungssport)</option>
+            </select>
+          </label>
+          <label>Ziel
+            <select id="c-goal" required>
+              <option value="">Bitte wählen</option>
+              <option value="1.15">Muskelaufbau</option>
+              <option value="1.07">Muskelaufbau, kontrolliert</option>
+              <option value="1">Gewicht halten</option>
+              <option value="0.9">Fettabbau, kontrolliert</option>
+              <option value="0.8">Fettabbau</option>
+            </select>
+          </label>
+          <label>Eiweißbedarf
+            <select id="c-prot" required>
+              <option value="">Bitte wählen</option>
+              <option value="kg|0.8">Nicht-Sportler: 0,8 g pro kg Körpergewicht</option>
+              <option value="kg|1.5">Sportler: 1,5 g pro kg Körpergewicht</option>
+              <option value="ffm|2">Kraftsport, Aufbau: 2 g pro kg fettfreie Masse</option>
+              <option value="ffm|2.5">Kraftsport, Diät: 2,5 g pro kg fettfreie Masse</option>
+            </select>
+          </label>
+          <fieldset>
+            <legend>Sport in der Freizeit</legend>
+            <div class="act act-head"><span>Sportart</span><span>Tage pro Woche</span><span>Dauer pro Tag</span></div>
+            <div id="acts"></div>
+          </fieldset>
+          <button class="btn" type="submit">Berechnen</button>
+          <p class="err" id="c-err" role="alert"></p>
+        </form>
+        <div class="result" id="c-res" aria-live="polite">
+          <h3>Dein Ergebnis</h3>
+          <table>
+            <tr><td>Grundumsatz</td><td id="r-bmr"></td></tr>
+            <tr><td>Arbeitsumsatz</td><td id="r-work"></td></tr>
+            <tr><td>Freizeitumsatz</td><td id="r-sport"></td></tr>
+            <tr class="big"><td>Zielzufuhr</td><td id="r-goal"></td></tr>
+            <tr><td>Eiweiß</td><td id="r-p"></td></tr>
+            <tr><td>Fett</td><td id="r-f"></td></tr>
+            <tr><td>Kohlenhydrate</td><td id="r-c"></td></tr>
+          </table>
+          <p id="r-note"></p>
+          <p>Die Makros: Eiweiß nach Deiner Auswahl, Fett bei Frauen 1 g und bei Männern 0,6 g pro kg Körpergewicht, der Rest sind Kohlenhydrate.</p>
+          <p>Der Rechner liefert eine Orientierung. Jeder Körper ist anders, das Ergebnis kann bis zu 20 % abweichen. Wir passen Deine Zahlen im Coaching laufend an Deinen Fortschritt an.</p>
+          <p><a href="index.html#kontakt" style="color:#fff">Persönlichen Plan mit uns erstellen</a></p>
+        </div>
+      </div>
+      <dialog id="bf-dlg" aria-labelledby="bf-title">
+        <h3 id="bf-title">Körperfettanteil abschätzen</h3>
+        <p class="note">Such das Bild, das Deinem Körper am nächsten kommt, und tippe darauf. Wir tragen die Mitte des Bereichs ein, Du kannst den Wert danach noch anpassen.</p>
+        <div id="bf-grid"></div>
+        <p class="note">Die Bilder dienen als Orientierung. Die Schätzung kann um etwa 3 bis 5 Prozentpunkte abweichen. Genauer sind Messungen mit Caliper oder Körperanalysewaage.</p>
+        <button type="button" class="btn ghost" id="bf-close">Schließen</button>
+      </dialog>
+      <div class="info">
+        <h3>Grundumsatz: Dein Mindestbedarf</h3>
+        <p>Auch wenn Du den ganzen Tag im Bett bleibst, verbraucht Dein Körper Energie, zum Beispiel für Atmung, Herzschlag und Körpertemperatur. Diesen Mindestbedarf nennt man Grundumsatz. Er hängt vor allem von Größe, Gewicht, Alter, Geschlecht und Muskelmasse ab.</p>
+        <h3>Arbeitsumsatz: Dein Beruf zählt mit</h3>
+        <p>Je mehr Du Dich im Job bewegst, desto mehr Energie kommt zum Grundumsatz hinzu. Wer auf dem Bau arbeitet, verbraucht deutlich mehr als jemand, der den Tag am Schreibtisch verbringt. Der Rechner berücksichtigt das über vier Stufen.</p>
+        <h3>Freizeitumsatz: Dein Sport</h3>
+        <p>In der Tabelle trägst Du ein, welchen Sport Du wie oft und wie lange machst. Jede Einheit erhöht Deinen Tagesverbrauch. Findest Du Deine Sportart nicht, wähle einfach eine mit ähnlicher Belastung.</p>
+        <h3>Muskeln aufbauen und Fett abbauen zugleich?</h3>
+        <p>Beides gleichzeitig gelingt nur in Ausnahmefällen, etwa als absoluter Anfänger oder mit einer sehr aufwendigen Ernährung. Für den Fettabbau brauchst Du ein Kaloriendefizit, Du isst also weniger, als Dein Körper verbraucht. Für den Muskelaufbau brauchst Du einen Überschuss. In beiden Fällen sind Eiweiß und Fett die wichtigsten Stellschrauben bei den Makronährstoffen. Wähle im Rechner einfach das Ziel, das gerade zu Dir passt.</p>
+        <p><a class="btn" href="index.html#kontakt">Persönliches Coaching anfragen</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap foot">
+    <div>© 2026 2C Progress Coaching GbR · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="agb.html">AGB</a> · <a href="widerruf.html">Widerruf</a></div>
+    <div class="icons sm"><a href="mailto:info@2cp-coaching.de" aria-label="E-Mail an 2C Progress Coaching schreiben" title="E-Mail"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a><a href="https://wa.me/4915140187097" aria-label="Per WhatsApp schreiben" title="WhatsApp" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21l1.65-4.9A8.5 8.5 0 1 1 8 19.4L3 21z"/><path d="M9 9.2c0 3 2.6 5.6 5.6 5.6l1.2-1.4-2-1-.8.7c-1-.4-1.9-1.3-2.3-2.3l.7-.8-1-2L9 9.2z"/></svg></a><a href="https://www.instagram.com/2cp_coaching" aria-label="2C Progress Coaching auf Instagram" title="Instagram" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></div>
+  </div>
+</footer>
+<a class="wa-float" href="https://wa.me/4915140187097" rel="noopener" aria-label="Per WhatsApp schreiben" title="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21l1.65-4.9A8.5 8.5 0 1 1 8 19.4L3 21z"/><path d="M9 9.2c0 3 2.6 5.6 5.6 5.6l1.2-1.4-2-1-.8.7c-1-.4-1.9-1.3-2.3-2.3l.7-.8-1-2L9 9.2z"/></svg></a>
+<div class="cta-bar"><a class="btn" href="index.html#kontakt">Unverbindliches Erstgespräch</a></div>
+<script src="site.js" defer></script>
+<script src="kalorienrechner.js" defer></script>
+</body>
+</html>
