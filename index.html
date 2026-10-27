@@ -143,6 +143,8 @@ legend{font-weight:800;font-size:1.25rem;margin-bottom:.6rem}
 .info p{color:#cdd4cd;margin-bottom:.9rem}
 .info ul{margin:0 0 1rem 1.2rem;color:#cdd4cd}
 .info li{margin-bottom:.4rem}
+.info.top{margin:0 0 2.5rem}
+.info.top h3{margin-top:1.4rem}
 .tbl{overflow-x:auto;margin:1rem 0}
 .tbl table{width:100%;border-collapse:collapse;min-width:420px}
 .tbl th,.tbl td{text-align:left;padding:.65rem .8rem;border-bottom:1px solid var(--line)}
@@ -413,8 +415,8 @@ footer a{color:var(--tx)}
           <select name="ziel"><option>Muskelaufbau</option><option>Fettabbau</option><option>Gewicht halten und fitter werden</option><option>Noch unsicher</option></select>
         </label>
         <div class="grid2">
-          <label>Gewünschte Laufzeit
-            <select name="laufzeit" id="k-lz"><option>Noch keine Auswahl</option><option>3 Monate</option><option>6 Monate</option><option>12 Monate</option></select>
+          <label>Gewünschtes Angebot
+            <select name="angebot" id="k-lz"><option>Noch keine Auswahl</option><option>Coaching: 3 Monate</option><option>Coaching: 6 Monate</option><option>Coaching: 12 Monate</option><option>Trainingsplan</option><option>Ernährungsplan</option><option>Trainings- &amp; Ernährungsplan</option><option>Personaltraining</option></select>
           </label>
           <label>Zahlungsart
             <select name="zahlung" id="k-zahl"><option>Noch keine Auswahl</option><option>Monatlich</option><option>Einmalig im Voraus</option></select>
@@ -434,7 +436,13 @@ footer a{color:var(--tx)}
   <section id="rechner">
     <div class="wrap">
       <h2>Kalorienrechner</h2>
-      <p class="lead">Berechne Deinen täglichen Kalorienbedarf und eine Richtschnur für Eiweiß, Fett und Kohlenhydrate. Je genauer Deine Angaben, desto besser das Ergebnis.</p>
+      <p class="lead">Deinen täglichen Kalorienbedarf ganz einfach berechnen</p>
+      <div class="info top">
+        <p>Ob Du abnehmen oder Muskeln aufbauen willst: Am Anfang steht die Frage, wie viele Kalorien Dein Körper täglich braucht und wie Du sie auf Eiweiß, Fett und Kohlenhydrate verteilst.</p>
+        <p>Dein Körper verbraucht den ganzen Tag Energie, im Beruf, im Training und in der Freizeit. Nimmst Du dauerhaft mehr Energie auf, als Du verbrauchst, speichert er den Überschuss als Körperfett. Nimmst Du weniger auf, greift er auf seine Reserven zurück. Wer seinen Bedarf kennt, kann deshalb gezielt steuern, ob er zunimmt, abnimmt oder sein Gewicht hält.</p>
+        <h3>Dein Bedarf in wenigen Schritten</h3>
+        <p>Gib Deine Körperdaten, Deinen Beruf und Deinen Sport ein. Der Rechner schätzt daraus Deinen Tagesbedarf und passt ihn an Dein Ziel an. Das Ergebnis ist eine Orientierung, die wir im Coaching laufend an Deinen Fortschritt anpassen.</p>
+      </div>
       <div class="calc">
         <form id="calc" novalidate>
           <label>Geschlecht
@@ -494,7 +502,7 @@ footer a{color:var(--tx)}
             <tr><td>Kohlenhydrate</td><td id="r-c"></td></tr>
           </table>
           <p id="r-note"></p>
-          <p>Die Makros: Eiweiß nach Deiner Auswahl, Fett bei Frauen 1 g und bei Männern 0,6 bis 0,8 g pro kg Körpergewicht, der Rest sind Kohlenhydrate.</p>
+          <p>Die Makros: Eiweiß nach Deiner Auswahl, Fett bei Frauen 1 g und bei Männern 0,6 g pro kg Körpergewicht, der Rest sind Kohlenhydrate.</p>
           <p>Der Rechner liefert eine Orientierung. Jeder Körper ist anders, das Ergebnis kann bis zu 20 % abweichen. Wir passen Deine Zahlen im Coaching laufend an Deinen Fortschritt an.</p>
           <p><a href="#kontakt" style="color:#fff">Persönlichen Plan mit uns erstellen</a></p>
         </div>
@@ -506,6 +514,17 @@ footer a{color:var(--tx)}
         <p class="note">Die Bilder dienen als Orientierung. Die Schätzung kann um etwa 3 bis 5 Prozentpunkte abweichen. Genauer sind Messungen mit Caliper oder Körperanalysewaage.</p>
         <button type="button" class="btn ghost" id="bf-close">Schließen</button>
       </dialog>
+      <div class="info">
+        <h3>Grundumsatz: Dein Mindestbedarf</h3>
+        <p>Auch wenn Du den ganzen Tag im Bett bleibst, verbraucht Dein Körper Energie, zum Beispiel für Atmung, Herzschlag und Körpertemperatur. Diesen Mindestbedarf nennt man Grundumsatz. Er hängt vor allem von Größe, Gewicht, Alter, Geschlecht und Muskelmasse ab.</p>
+        <h3>Arbeitsumsatz: Dein Beruf zählt mit</h3>
+        <p>Je mehr Du Dich im Job bewegst, desto mehr Energie kommt zum Grundumsatz hinzu. Wer auf dem Bau arbeitet, verbraucht deutlich mehr als jemand, der den Tag am Schreibtisch verbringt. Der Rechner berücksichtigt das über vier Stufen.</p>
+        <h3>Freizeitumsatz: Dein Sport</h3>
+        <p>In der Tabelle trägst Du ein, welchen Sport Du wie oft und wie lange machst. Jede Einheit erhöht Deinen Tagesverbrauch. Findest Du Deine Sportart nicht, wähle einfach eine mit ähnlicher Belastung.</p>
+        <h3>Muskeln aufbauen und Fett abbauen zugleich?</h3>
+        <p>Beides gleichzeitig gelingt nur in Ausnahmefällen, etwa als absoluter Anfänger oder mit einer sehr aufwendigen Ernährung. Für den Fettabbau brauchst Du ein Kaloriendefizit, Du isst also weniger, als Dein Körper verbraucht. Für den Muskelaufbau brauchst Du einen Überschuss. In beiden Fällen sind Eiweiß und Fett die wichtigsten Stellschrauben bei den Makronährstoffen. Wähle im Rechner einfach das Ziel, das gerade zu Dir passt.</p>
+        <p><a class="btn" href="#kontakt">Persönliches Coaching anfragen</a></p>
+      </div>
     </div>
   </section>
 </div>
@@ -645,7 +664,7 @@ footer a{color:var(--tx)}
     <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt in der sicheren und stabilen Bereitstellung dieser Webseite. Dabei kann eine Übermittlung in die USA stattfinden. Sie stützt sich auf die Standardvertragsklauseln der EU-Kommission oder, soweit der Anbieter dafür zertifiziert ist, auf das EU-US Data Privacy Framework. Weitere Informationen findest Du in der Datenschutzerklärung von GitHub.</p>
 
     <h3>3. Kontaktformular</h3>
-    <p>Wenn Du das Kontaktformular nutzt, verarbeiten wir Deinen Namen, Deine E-Mail-Adresse, optional Deine Telefonnummer, Dein Ziel, Deine gewünschte Laufzeit und Zahlungsart sowie Deine Nachricht. Wir verwenden diese Angaben nur, um Deine Anfrage zu beantworten.</p>
+    <p>Wenn Du das Kontaktformular nutzt, verarbeiten wir Deinen Namen, Deine E-Mail-Adresse, optional Deine Telefonnummer, Dein Ziel, Dein gewünschtes Angebot, Deine Zahlungsart sowie Deine Nachricht. Wir verwenden diese Angaben nur, um Deine Anfrage zu beantworten.</p>
     <p>Das Formular wird über den Dienst Formspree betrieben (Formspree, Inc., USA). Formspree nimmt Deine Angaben entgegen, leitet sie per E-Mail an uns weiter und speichert sie zeitlich begrenzt auf seinen Servern. Mit Formspree besteht ein Auftragsverarbeitungsverhältnis. Eine Übermittlung in die USA stützt sich auf Standardvertragsklauseln der EU-Kommission.</p>
     <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, wenn Deine Anfrage auf ein Coaching abzielt, sonst Art. 6 Abs. 1 lit. f DSGVO (unser Interesse an der Beantwortung von Anfragen). Wir löschen Deine Anfrage, sobald sie erledigt ist und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
 
@@ -722,7 +741,7 @@ footer a{color:var(--tx)}
     var target=(bmr+work+sport)*goal,floored=false;
     if(target<bmr){target=bmr;floored=true;}
     var p=prot.split('|'),pg=(p[0]==='kg'?w:ffm)*(+p[1]);
-    var fLo=sex==='m'?0.6*w:w,fHi=sex==='m'?0.8*w:w;
+    var fLo=sex==='m'?0.6*w:w,fHi=fLo;
     var cHi=Math.max(0,(target-pg*4-fLo*9)/4),cLo=Math.max(0,(target-pg*4-fHi*9)/4);
     function rng(a,b,u){return Math.round(a)===Math.round(b)?fmt(a,u):Math.round(a).toLocaleString('de-DE')+'–'+fmt(b,u)}
     $('r-bmr').textContent=fmt(bmr,'kcal');$('r-work').textContent=fmt(work,'kcal');$('r-sport').textContent=fmt(sport,'kcal');
@@ -757,7 +776,7 @@ footer a{color:var(--tx)}
     var d=document.querySelector('#dur [aria-pressed="true"]'),p=document.querySelector('#pay [aria-pressed="true"]').dataset.p;
     main.textContent=d.dataset.m+' Monate · '+(p==='mo'?d.dataset.mo+' € pro Monat':d.dataset.all+' € bei Vorauszahlung');
   }
-  function sync(){var d=document.querySelector('#dur [aria-pressed="true"]'),p=document.querySelector('#pay [aria-pressed="true"]').dataset.p,a=document.getElementById('k-lz'),b=document.getElementById('k-zahl');if(a)a.value=d.dataset.m+' Monate';if(b)b.value=p==='mo'?'Monatlich':'Einmalig im Voraus';}
+  function sync(){var d=document.querySelector('#dur [aria-pressed="true"]'),p=document.querySelector('#pay [aria-pressed="true"]').dataset.p,a=document.getElementById('k-lz'),b=document.getElementById('k-zahl');if(a)a.value='Coaching: '+d.dataset.m+' Monate';if(b)b.value=p==='mo'?'Monatlich':'Einmalig im Voraus';}
   function pick(list){list.forEach(function(b){b.addEventListener('click',function(){list.forEach(function(x){x.setAttribute('aria-pressed',x===b);});upd();sync();});});}
   pick(dur);pick(pay);upd();
   var go=document.querySelector('#preise .btns a.btn:not(.ghost)');if(go)go.addEventListener('click',sync);
