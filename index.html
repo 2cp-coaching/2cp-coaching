@@ -225,6 +225,9 @@ footer a{color:var(--tx)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 .res-card+.res-card{margin-top:1.5rem}
 .fc{grid-column:1/-1}
+.fc-top{display:grid;gap:1.5rem;margin:1rem 0 1.5rem;align-items:start}
+.fc-top .stats{margin:.4rem 0 0}
+@media(min-width:900px){.fc-top{grid-template-columns:1.15fr 1fr}.fc-top .stats{grid-template-columns:1fr 1fr}}
 .fc .stats{margin:1.2rem 0 1.6rem}
 .fc .stats b{color:var(--tx)}
 .fc-chart{position:relative;margin:.4rem 0 .4rem}
@@ -386,12 +389,20 @@ footer a{color:var(--tx)}
       <div class="res-card">
         <div class="res-text fc">
           <h3>Felix: 13 Monate Muskelaufbau – <em>und es hat sich gelohnt</em></h3>
-          <p>Felix ist im Februar 2025 mit einem klaren Ziel gestartet: Muskeln, Muskeln, Muskeln. Statt planlos „dreckig“ zuzunehmen, haben wir mit ihm einen strukturierten Aufbau über 13 Monate geplant, gefolgt von einer gezielten Diät, um die neue Muskulatur sichtbar zu machen.</p>
-          <div class="stats">
+          <div class="fc-top">
+            <div class="res-img fc-img">
+              <img class="on" src="kunde2-vorne.jpg" width="896" height="595" loading="lazy" alt="Felix von vorne: links am 04.05.2025, rechts am 22.03.2026 nach dem Aufbau">
+              <span class="tag a">Mai 2025</span><span class="tag b">März 2026</span>
+            </div>
+            <div>
+              <p>Felix ist im Februar 2025 mit einem klaren Ziel gestartet: Muskeln, Muskeln, Muskeln. Statt planlos „dreckig“ zuzunehmen, haben wir mit ihm einen strukturierten Aufbau über 13 Monate geplant, gefolgt von einer gezielten Diät, um die neue Muskulatur sichtbar zu machen.</p>
+              <div class="stats">
             <div><b>+9,9 kg</b><span>kontrolliert aufgebaut in 13 Monaten</span></div>
             <div><b>−6,6 kg</b><span>in 8 Wochen Diät wieder runter</span></div>
             <div><b>+69 %</b><span>mehr Gewicht beim Hack Squat (10 Wdh.)</span></div>
             <div><b>58 von 66</b><span>Wochen lückenlos getrackt</span></div>
+          </div>
+            </div>
           </div>
           <div class="fc-chart">
             <svg viewBox="0 0 720 300" role="img" aria-labelledby="fc-title fc-desc" id="fc-svg"><title id="fc-title">Körpergewicht von Felix, Wochendurchschnitt</title><desc id="fc-desc">Von 79,7 kg im Februar 2025 auf 89,6 kg im März 2026 im Aufbau, danach Diät bis 82,7 kg Ende Mai 2026.</desc><rect class="fc-cut" x="635.0" y="16" width="73.0" height="250"/><text class="fc-p" x="339.5" y="32" text-anchor="middle">AUFBAU · 13 Monate</text><text class="fc-p" x="671.5" y="256" text-anchor="middle">DIÄT</text><line class="fc-grid" x1="44" x2="708" y1="248.1" y2="248.1"/><text class="fc-t" x="36" y="252.1" text-anchor="end">78</text><line class="fc-grid" x1="44" x2="708" y1="176.7" y2="176.7"/><text class="fc-t" x="36" y="180.7" text-anchor="end">82</text><line class="fc-grid" x1="44" x2="708" y1="105.3" y2="105.3"/><text class="fc-t" x="36" y="109.3" text-anchor="end">86</text><line class="fc-grid" x1="44" x2="708" y1="33.9" y2="33.9"/><text class="fc-t" x="36" y="37.9" text-anchor="end">90</text><text class="fc-t" x="51.3" y="290" text-anchor="middle">Mär 25</text><text class="fc-t" x="229.3" y="290" text-anchor="middle">Jul 25</text><text class="fc-t" x="408.8" y="290" text-anchor="middle">Nov 25</text><text class="fc-t" x="584.0" y="290" text-anchor="middle">Mär 26</text><polygon class="fc-area" points="44.0,266.0 44.0,217.2 54.2,206.5 64.4,211.4 84.9,216.2 95.1,219.9 105.3,244.9 115.5,213.1 125.7,175.8 135.9,191.2 146.2,186.9 156.4,199.0 166.6,208.3 176.8,194.2 187.0,171.2 197.2,163.0 207.4,158.3 217.7,175.5 227.9,186.2 238.1,183.3 248.3,166.5 258.5,190.1 268.7,170.3 289.2,143.5 299.4,134.0 309.6,129.0 319.8,125.6 330.0,120.1 340.2,114.0 350.5,117.3 360.7,119.6 381.1,112.4 401.5,123.0 411.8,118.3 422.0,110.1 442.4,111.4 462.8,116.0 473.0,98.9 483.3,88.5 493.5,72.4 503.7,84.0 513.9,94.6 524.1,97.4 534.3,89.9 544.6,83.3 565.0,86.4 575.2,76.2 585.4,61.9 595.6,56.4 605.8,40.3 616.1,50.5 626.3,45.8 636.5,56.9 646.7,64.8 656.9,86.2 667.1,69.8 677.4,82.6 687.6,107.1 708.0,164.2 708.0,266.0"/><polyline class="fc-line" points="44.0,217.2 54.2,206.5 64.4,211.4 84.9,216.2 95.1,219.9 105.3,244.9 115.5,213.1 125.7,175.8 135.9,191.2 146.2,186.9 156.4,199.0 166.6,208.3 176.8,194.2 187.0,171.2 197.2,163.0 207.4,158.3 217.7,175.5 227.9,186.2 238.1,183.3 248.3,166.5 258.5,190.1 268.7,170.3 289.2,143.5 299.4,134.0 309.6,129.0 319.8,125.6 330.0,120.1 340.2,114.0 350.5,117.3 360.7,119.6 381.1,112.4 401.5,123.0 411.8,118.3 422.0,110.1 442.4,111.4 462.8,116.0 473.0,98.9 483.3,88.5 493.5,72.4 503.7,84.0 513.9,94.6 524.1,97.4 534.3,89.9 544.6,83.3 565.0,86.4 575.2,76.2 585.4,61.9 595.6,56.4 605.8,40.3 616.1,50.5 626.3,45.8 636.5,56.9 646.7,64.8 656.9,86.2 667.1,69.8 677.4,82.6 687.6,107.1 708.0,164.2"/><circle class="fc-dot" cx="44.0" cy="217.2" r="5"/><circle class="fc-dot" cx="605.8" cy="40.3" r="5"/><circle class="fc-dot" cx="708.0" cy="164.2" r="5"/><text class="fc-l" x="52.0" y="239.2">79,7 kg</text><text class="fc-l" x="605.8" y="30.3" text-anchor="middle">89,6 kg</text><text class="fc-l" x="700.0" y="186.2" text-anchor="end">82,7 kg</text><line class="fc-x" id="fc-x" x1="0" x2="0" y1="16" y2="266" hidden/><circle class="fc-hov" id="fc-hov" r="6" hidden/><rect id="fc-hit" x="44" y="16" width="664" height="250" fill="transparent"/></svg>
