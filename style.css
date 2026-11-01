@@ -31,7 +31,7 @@ nav .btn{padding:.5rem 1rem;color:var(--ink)}
 [hidden]{display:none!important}
 .menu-btn{display:none}
 nav a.on{color:var(--tx);box-shadow:0 2px 0 var(--ac)}
-@media(max-width:1000px){
+@media(max-width:1240px){
 .menu-btn{display:grid;place-items:center;width:44px;height:44px;border-radius:8px;border:1px solid var(--line);background:var(--s1);color:var(--tx);cursor:pointer}
 .menu-btn svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round}
 nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--bg);padding:.4rem 1.25rem 1.2rem;border-bottom:1px solid var(--line);font-size:1.05rem}
@@ -338,3 +338,18 @@ body{padding-bottom:4.6rem}
 .ba span{color:var(--mute);padding-top:.45rem;border-top:2px solid var(--line)}
 .ba span+span{color:var(--ac);border-top-color:var(--ac)}
 .teaser .ba{margin:0;padding:.55rem 0 0;gap:0}
+
+nav a,.brand span{white-space:nowrap}
+/* Prozis */
+.ad-label{display:inline-block;font-size:.78rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--mute);color:var(--mute);border-radius:999px;padding:.15rem .7rem;margin-bottom:1rem}
+.code-box{background:var(--s1);border:2px solid var(--ac);border-radius:18px;padding:2rem 1.5rem;text-align:center;max-width:620px;margin:2rem 0;box-shadow:0 10px 40px rgba(232,194,26,.1)}
+.code-box small{display:block;color:var(--mute);margin-bottom:.6rem}
+.code-box .code{display:block;font-size:clamp(2rem,9vw,3.4rem);font-weight:800;letter-spacing:.06em;color:var(--ac);margin:.2rem 0 1.2rem;user-select:all;word-break:break-all}
+.code-box .btns{justify-content:center}
+.promo-grid{display:grid;gap:1rem;margin:1.2rem 0 2rem}
+@media(min-width:700px){.promo-grid{grid-template-columns:repeat(3,1fr)}}
+.promo-grid figure{margin:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--s1)}
+.promo-grid a{display:block}
+.promo-grid img{display:block;width:100%;height:auto}
+
+.h1{font-size:clamp(1.9rem,5vw,2.9rem);font-weight:800;margin-bottom:1rem;line-height:1.12;letter-spacing:-.015em}
