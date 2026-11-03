@@ -43,7 +43,9 @@ nav .btn{margin-top:1rem;text-align:center;border-bottom:2px solid var(--ac)}
 
 .hero{padding:4rem 0 4.5rem}
 .hero .wrap{display:grid;gap:2.5rem;align-items:center}
-.hero h1{font-size:clamp(2.6rem,9vw,4.9rem);font-weight:800;margin-bottom:1.4rem}
+.hero h1{font-size:clamp(2rem,8.4vw,3.7rem);font-weight:800;margin-bottom:1.6rem;line-height:1.1}
+.hero h1 .l1,.hero h1 .l2{display:block;white-space:nowrap}
+.hero h1 .l2{font-size:1.12em;margin-top:.1em}
 .ticks{list-style:none;display:grid;gap:.6rem;margin-bottom:2rem}
 .ticks li{padding-left:1.8rem;position:relative}
 .ticks li::before{content:"✓";position:absolute;left:0;color:var(--ac);font-weight:800}
