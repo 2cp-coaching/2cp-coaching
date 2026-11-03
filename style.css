@@ -373,3 +373,4 @@ nav a,.brand span{white-space:nowrap}
 .team-txt{padding-top:0}
 }
 @media(min-width:1100px){.team{margin-inline:-3.5rem}}
+.hero-photos figure{align-self:start}
